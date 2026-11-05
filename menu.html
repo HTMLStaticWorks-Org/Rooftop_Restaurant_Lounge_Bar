@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROOFTOP — Culinary &amp; Cocktail Menu | A Menu Made For Memorable Moments</title>
+  <meta name="description" content="Explore thoughtfully curated dishes, refined flavours and signature drinks at ROOFTOP Restaurant & Lounge Bar.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL STICKY HEADER & NAVIGATION (SECTION 9)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container-luxury">
+      <nav class="navbar-rooftop" aria-label="Primary Navigation">
+        <a href="index.html" class="brand-logo" aria-label="ROOFTOP Restaurant & Lounge Bar Home">
+          <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5"/>
+            <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5"/>
+            <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5"/>
+            <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5"/>
+            <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5"/>
+            <circle cx="46" cy="14" r="3" fill="#D6B878"/>
+          </svg>
+          <div class="brand-logo-text">
+            <span class="brand-wordmark">ROOFTOP</span>
+            <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+          </div>
+        </a>
+
+        <ul class="nav-center">
+          <li><a href="index.html" class="nav-link-rooftop">Home</a></li>
+          <li><a href="home-2.html" class="nav-link-rooftop">Home 2</a></li>
+          <li><a href="menu.html" class="nav-link-rooftop active">Menu</a></li>
+          <li><a href="events.html" class="nav-link-rooftop">Events</a></li>
+          <li><a href="gallery.html" class="nav-link-rooftop">Gallery</a></li>
+          <li><a href="about.html" class="nav-link-rooftop">About</a></li>
+          <li><a href="contact.html" class="nav-link-rooftop">Contact</a></li>
+          <li><a href="dashboard.html" class="btn-gold btn-header-reserve">Dashboard</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="icon-btn" data-rtl-toggle title="Toggle LTR/RTL Direction">
+            <span class="dir-label">RTL</span>
+          </button>
+          <button type="button" class="icon-btn" data-theme-toggle title="Toggle Dark/Light Mode">
+            <i class="bi bi-sun"></i>
+          </button>
+          <a href="login.html" class="nav-login-link"><i class="bi bi-person me-1"></i>Login</a>
+          <button type="button" class="hamburger-btn" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-Out Navigation Drawer -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+  <aside class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Mobile Navigation">
+    <div>
+      <div class="d-flex justify-content-between align-items-center pb-3 border-bottom" style="border-color: var(--subtle-border) !important;">
+        <div class="brand-logo-text">
+          <span class="brand-wordmark">ROOFTOP</span>
+          <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+        </div>
+        <button type="button" class="icon-btn" id="mobileMenuCloseBtn" aria-label="Close Navigation Menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="login.html"><i class="bi bi-person-circle me-2" style="color:var(--champagne-gold);"></i>Guest Login</a></li>
+      </ul>
+    </div>
+    <div class="pt-3 border-top" style="border-color: var(--subtle-border) !important;">
+      <div class="d-flex gap-2 mb-3">
+        <button type="button" class="btn-outline-gold w-50 py-2" data-theme-toggle>
+          <i class="bi bi-sun"></i> <span class="theme-label">Light Mode</span>
+        </button>
+        <button type="button" class="btn-outline-gold w-50 py-2" data-rtl-toggle>
+          <i class="bi bi-arrow-left-right"></i> <span class="dir-label">RTL</span>
+        </button>
+      </div>
+      <a href="dashboard.html" class="btn-gold w-100">Dashboard</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======================================================================
+         MENU HERO SECTION
+         ====================================================================== -->
+    <section class="page-hero">
+      <img
+        src="assets/images/k-AcZ5I_xCdzUK6qS3OPQl_sP3-znJ6w_Fj4J7x6s0eTDowMpckTkI8AaFqw_2YKT61NVF0XNHWdyUKSHWJDs81dH5TLZIoFPrZWX9sZy4ZVBgHExHcyO-nIFj_JHgNbTenyzncS4XMivzRb54Z1jnn8Zo6J0s6vxsKbGS4OyTg.jpg"
+        alt="Fine dining culinary presentation at ROOFTOP"
+        class="hero-bg-media"
+      >
+      <div class="hero-overlay"></div>
+      <div class="container-luxury page-hero-content">
+        <span class="eyebrow-label">GASTRONOMY &amp; MIXOLOGY</span>
+        <h1 class="display-hero text-white mb-3">
+          A MENU MADE FOR MEMORABLE MOMENTS.
+        </h1>
+        <p class="lead mb-0" style="color: var(--text-secondary);">
+          "Explore thoughtfully curated dishes, refined flavours and signature drinks."
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         INTERACTIVE MENU EXPLORER (SECTION 12)
+         ====================================================================== -->
+    <section class="section-padding surface-charcoal">
+      <div class="container-luxury">
+        <!-- Search & Demo Pricing Banner -->
+        <div class="row g-3 align-items-center justify-content-between mb-4">
+          <div class="col-md-6 col-lg-5">
+            <div class="position-relative">
+              <i class="bi bi-search position-absolute top-50 translate-middle-y ms-3" style="color: var(--champagne-gold);"></i>
+              <input
+                type="search"
+                id="menuSearchInput"
+                class="form-control-luxury ps-5"
+                placeholder="Search dishes, ingredients or cocktails (e.g., Truffle, Salmon, Martini)..."
+                aria-label="Search Menu Items"
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-7 text-md-end">
+            <span class="badge-gold me-2"><i class="bi bi-currency-rupee"></i> Demo INR Pricing</span>
+            <span class="veg-indicator"><i class="bi bi-circle-fill" style="font-size:0.45rem;"></i> Vegetarian Indicator Available</span>
+          </div>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="filter-pills justify-content-start mb-5" role="tablist" aria-label="Menu Categories">
+          <button type="button" class="filter-pill-btn active" data-menu-category="All">All</button>
+          <button type="button" class="filter-pill-btn" data-menu-category="Starters">Starters</button>
+          <button type="button" class="filter-pill-btn" data-menu-category="Signature Plates">Signature Plates</button>
+          <button type="button" class="filter-pill-btn" data-menu-category="Main Course">Main Course</button>
+          <button type="button" class="filter-pill-btn" data-menu-category="Seafood">Seafood</button>
+          <button type="button" class="filter-pill-btn" data-menu-category="Vegetarian">Vegetarian</button>
+          <button type="button" class="filter-pill-btn" data-menu-category="Signature Cocktails">Signature Cocktails</button>
+          <button type="button" class="filter-pill-btn" data-menu-category="Mocktails">Mocktails</button>
+          <button type="button" class="filter-pill-btn" data-menu-category="Desserts">Desserts</button>
+          <button type="button" class="filter-pill-btn" data-menu-category="Favourites">
+            <i class="bi bi-heart-fill me-1" style="color:var(--champagne-gold);"></i> Saved Favourites (<span id="favMenuCount">0</span>)
+          </button>
+        </div>
+
+        <!-- Dynamic Menu Grid (populated by main.js with all 26 required items) -->
+        <div class="menu-grid" id="rooftopMenuGrid"></div>
+
+        <!-- Empty State -->
+        <div id="menuEmptyState" class="text-center py-5" style="display: none;">
+          <i class="bi bi-journal-x fs-1 mb-3 d-block" style="color: var(--champagne-gold);"></i>
+          <h3 class="h4">No Matching Dishes or Drinks Found</h3>
+          <p class="mb-4">Try clearing your search term or selecting another menu category.</p>
+          <button type="button" class="btn-gold" id="resetMenuFilterBtn">Show All Menu Items</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SOMMELIER & CHEF TABLE PAIRING CALLOUT
+         ====================================================================== -->
+    <section class="section-padding surface-burgundy-accent">
+      <div class="container-luxury">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-8">
+            <span class="eyebrow-label">DINE ABOVE THE SKYLINE</span>
+            <h2 class="section-title mb-2">EXPERIENCE OUR MENU AT YOUR TABLE.</h2>
+            <p class="mb-0">
+              All dishes and signature cocktails are prepared fresh to order for dine-in rooftop guests. Reserve your table for sunset aperitifs or starlight dinner.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="dashboard.html#book-table" class="btn-gold">
+              RESERVE YOUR TABLE <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Tasting Notes Item Detail Modal -->
+  <div class="rooftop-modal-backdrop" id="menuDetailModal" role="dialog" aria-modal="true" aria-labelledby="modalDishTitle">
+    <div class="rooftop-modal-dialog">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <span class="badge-gold" id="modalDishCat">Category</span>
+        <button type="button" class="icon-btn" id="closeMenuModalBtn" aria-label="Close Modal">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <img id="modalDishImg" src="assets/images/k-AcZ5I_xCdzUK6qS3OPQl_sP3-znJ6w_Fj4J7x6s0eTDowMpckTkI8AaFqw_2YKT61NVF0XNHWdyUKSHWJDs81dH5TLZIoFPrZWX9sZy4ZVBgHExHcyO-nIFj_JHgNbTenyzncS4XMivzRb54Z1jnn8Zo6J0s6vxsKbGS4OyTg.jpg" alt="Dish preview" class="w-100 mb-3" style="aspect-ratio:16/10; object-fit:cover; border:1px solid var(--subtle-border);">
+      <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+        <h3 class="h3 mb-0" id="modalDishTitle">Dish Name</h3>
+        <span class="menu-card-price" id="modalDishPrice">₹950</span>
+      </div>
+      <div class="mb-3" id="modalDishVeg"></div>
+      <p class="mb-4" id="modalDishDesc"></p>
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 pt-3 border-top" style="border-color:var(--subtle-border) !important;">
+        <span class="small text-uppercase" style="font-size:0.7rem; letter-spacing:0.14em; color:var(--text-muted);">Dine-In Rooftop Experience Only</span>
+        <a href="dashboard.html#book-table" class="btn-gold py-2 px-3">Reserve Table for Tonight</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       GLOBAL PREMIUM FOOTER (SECTION 34)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container-luxury">
+      <div class="row g-5 pb-5 border-bottom" style="border-color: var(--subtle-border) !important;">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5"/>
+              <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5"/>
+              <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5"/>
+              <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5"/>
+              <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5"/>
+              <circle cx="46" cy="14" r="3" fill="#D6B878"/>
+            </svg>
+            <div class="brand-logo-text">
+              <span class="brand-wordmark">ROOFTOP</span>
+              <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+            </div>
+          </a>
+          <p class="small text-uppercase mb-2" style="letter-spacing: 0.18em; color: var(--champagne-gold);">
+            ABOVE THE CITY. BEYOND THE ORDINARY.
+          </p>
+          <p class="small mb-4">
+            "Where extraordinary skyline views meet unforgettable dining, signature cocktails and unforgettable nights."
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="footer-heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h3 class="footer-heading">Experience</h3>
+          <ul class="footer-links">
+            <li><a href="menu.html">Rooftop Dining</a></li>
+            <li><a href="home-2.html#signature-experiences">Lounge</a></li>
+            <li><a href="events.html">Live Music</a></li>
+            <li><a href="dashboard.html#book-table">Private Celebrations</a></li>
+            <li><a href="dashboard.html#loyalty">Guest Loyalty Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-3">
+          <h3 class="footer-heading">Contact (Demo Placeholders)</h3>
+          <ul class="footer-links">
+            <li>
+              <i class="bi bi-geo-alt me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Address Placeholder: Sky-Deck Level, Metropolitan Tower]</span>
+            </li>
+            <li>
+              <i class="bi bi-telephone me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Phone Placeholder: +91 00000 00000]</span>
+            </li>
+            <li>
+              <i class="bi bi-envelope me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Email Placeholder: reservations@rooftop-demo.com]</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-between align-items-center pt-4 gap-3 small" style="color: var(--muted-grey);">
+        <div>© 2026 ROOFTOP RESTAURANT &amp; LOUNGE BAR. ALL RIGHTS RESERVED.</div>
+        <div>Frontend Prototype • Demo Persistence via localStorage</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

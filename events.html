@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROOFTOP — Events &amp; Live Music | The City Lights Up. The Night Comes Alive.</title>
+  <meta name="description"
+    content="Experience unforgettable evenings with live music, curated events and an atmosphere above the city.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       GLOBAL STICKY HEADER & NAVIGATION (SECTION 9)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container-luxury">
+      <nav class="navbar-rooftop" aria-label="Primary Navigation">
+        <a href="index.html" class="brand-logo" aria-label="ROOFTOP Restaurant & Lounge Bar Home">
+          <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5" />
+            <circle cx="46" cy="14" r="3" fill="#D6B878" />
+          </svg>
+          <div class="brand-logo-text">
+            <span class="brand-wordmark">ROOFTOP</span>
+            <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+          </div>
+        </a>
+
+        <ul class="nav-center">
+          <li><a href="index.html" class="nav-link-rooftop">Home</a></li>
+          <li><a href="home-2.html" class="nav-link-rooftop">Home 2</a></li>
+          <li><a href="menu.html" class="nav-link-rooftop">Menu</a></li>
+          <li><a href="events.html" class="nav-link-rooftop active">Events</a></li>
+          <li><a href="gallery.html" class="nav-link-rooftop">Gallery</a></li>
+          <li><a href="about.html" class="nav-link-rooftop">About</a></li>
+          <li><a href="contact.html" class="nav-link-rooftop">Contact</a></li>
+          <li><a href="dashboard.html" class="btn-gold btn-header-reserve">Dashboard</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="icon-btn" data-rtl-toggle title="Toggle LTR/RTL Direction">
+            <span class="dir-label">RTL</span>
+          </button>
+          <button type="button" class="icon-btn" data-theme-toggle title="Toggle Dark/Light Mode">
+            <i class="bi bi-sun"></i>
+          </button>
+          <a href="login.html" class="nav-login-link"><i class="bi bi-person me-1"></i>Login</a>
+          <button type="button" class="hamburger-btn" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-Out Navigation Drawer -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+  <aside class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Mobile Navigation">
+    <div>
+      <div class="d-flex justify-content-between align-items-center pb-3 border-bottom"
+        style="border-color: var(--subtle-border) !important;">
+        <div class="brand-logo-text">
+          <span class="brand-wordmark">ROOFTOP</span>
+          <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+        </div>
+        <button type="button" class="icon-btn" id="mobileMenuCloseBtn" aria-label="Close Navigation Menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="login.html"><i class="bi bi-person-circle me-2" style="color:var(--champagne-gold);"></i>Guest
+            Login</a></li>
+      </ul>
+    </div>
+    <div class="pt-3 border-top" style="border-color: var(--subtle-border) !important;">
+      <div class="d-flex gap-2 mb-3">
+        <button type="button" class="btn-outline-gold w-50 py-2" data-theme-toggle>
+          <i class="bi bi-sun"></i> <span class="theme-label">Light Mode</span>
+        </button>
+        <button type="button" class="btn-outline-gold w-50 py-2" data-rtl-toggle>
+          <i class="bi bi-arrow-left-right"></i> <span class="dir-label">RTL</span>
+        </button>
+      </div>
+      <a href="dashboard.html" class="btn-gold w-100">Dashboard</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======================================================================
+         EVENTS HERO SECTION
+         ====================================================================== -->
+    <section class="page-hero">
+      <img src="assets/images/Ss9y01lCzCKlU2tG9QD8VU_5Nbd1OxO7rnibxMKAlrEor2Xle9_8ckORHi_V89_v89watF-MB9LI-yoC6hLrpuusu8jcaQfatitkA9mZeGG1TBloT8HvPKCrUGyAyIrYOPb9OeexGq-NCEzTaDOQrjuEhNJD5_70bEaTjcvP8kc.jpg"
+        alt="Live music and nighttime atmosphere at ROOFTOP" class="hero-bg-media">
+      <div class="hero-overlay"></div>
+      <div class="container-luxury page-hero-content">
+        <span class="eyebrow-label">CURATED NIGHTLIFE &amp; PERFORMANCES</span>
+        <h1 class="display-hero text-white mb-3">
+          THE CITY LIGHTS UP. THE NIGHT COMES ALIVE.
+        </h1>
+        <p class="lead mb-0" style="color: var(--text-secondary);">
+          "Experience unforgettable evenings with live music, curated events and an atmosphere above the city."
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 1 – FEATURED EVENT SHOWCASE
+         ====================================================================== -->
+    <section class="section-padding surface-charcoal" id="featured-event">
+      <div class="container-luxury">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4 reveal-up">
+          <span class="eyebrow-label mb-0">HEADLINE SHOWCASE</span>
+          <span class="badge-demo"><i class="bi bi-info-circle"></i> Editable Demo Event Information</span>
+        </div>
+
+        <div class="row g-0 border align-items-stretch reveal-up"
+          style="border-color: var(--champagne-gold) !important; background: var(--card-bg);">
+          <div class="col-lg-6 position-relative">
+            <img src="assets/images/RZ25x8DjtcADh5QeWhENluw_3zAQIJsvYILDdgLY4gjlPlcpRKzR-3qlLYIrw_CWIY6112WpiWZ5favVmMtxrxRNDkXIIvAlyzOQzKfME3UT9uWGK8klU5ARIhL5zAVGY34cHg0UyWYvUqCOKKDFb7xJeGziblY8MyaEIZ-Z2_bdwbm5.jpg"
+              alt="Featured Event Poster — Symphony of the Skyline Jazz Gala" class="w-100 h-100 object-fit-cover"
+              style="min-height: 420px;">
+            <div class="position-absolute top-0 start-0 m-4">
+              <span class="badge-demo">FEATURED LIVE MUSIC GALA</span>
+            </div>
+          </div>
+          <div class="col-lg-6 p-4 p-xl-5 d-flex flex-column justify-content-center">
+            <span class="badge-gold align-self-start mb-3">SIGNATURE JAZZ &amp; COCKTAIL SOIRÉE</span>
+            <h2 class="section-title mb-3">Symphony of the Skyline: Live Jazz Quartet</h2>
+            <div class="d-flex flex-wrap gap-4 mb-4 pb-3 border-bottom small"
+              style="border-color: var(--subtle-border) !important; color: var(--champagne-gold);">
+              <span><i class="bi bi-calendar3 me-2"></i>[Date Placeholder: Upcoming Saturday Showcase]</span>
+              <span><i class="bi bi-clock me-2"></i>[Time Placeholder: 8:30 PM – Midnight]</span>
+            </div>
+            <p class="mb-4">
+              Immerse yourself in an extraordinary evening where a four-piece contemporary jazz ensemble performs live
+              on our open-air terrace. Accompanied by bespoke smoked bourbon flights, artisanal sharing plates and
+              uninterrupted views of the glittering city horizon.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="dashboard.html#book-table" class="btn-gold">
+                Reserve a Table <i class="bi bi-arrow-up-right"></i>
+              </a>
+              <button type="button" class="btn-outline-gold" data-event-spotlight
+                data-event-title="Symphony of the Skyline: Live Jazz Quartet"
+                data-event-date="[Editable Demo Date: Saturday Showcase]"
+                data-event-time="[Editable Demo Time: 8:30 PM – Midnight]"
+                data-event-desc="Four-piece contemporary jazz ensemble performing on the sky-deck terrace with curated vintage cellar pours and signature cocktails.">
+                Event Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2 – UPCOMING EVENTS (6 CURATED EVENT LISTINGS)
+         ====================================================================== -->
+    <section class="section-padding surface-deep-black" id="upcoming-events-list">
+      <div class="container-luxury">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5 reveal-up">
+          <div>
+            <span class="eyebrow-label">SEASONAL LINEUP</span>
+            <h2 class="section-title mb-0">UPCOMING ROOFTOP EVENINGS.</h2>
+          </div>
+          <span class="badge-gold">All Dates &amp; Times Are Editable Demo Placeholders</span>
+        </div>
+
+        <div class="row g-4 reveal-up">
+          <!-- 1. Skyline Jazz Night -->
+          <div class="col-md-6 col-lg-4">
+            <article class="event-poster-card h-100">
+              <div class="event-poster-img">
+                <img src="assets/images/RZ25x8DjtcADh5QeWhENluw_3zAQIJsvYILDdgLY4gjlPlcpRKzR-3qlLYIrw_CWIY6112WpiWZ5favVmMtxrxRNDkXIIvAlyzOQzKfME3UT9uWGK8klU5ARIhL5zAVGY34cHg0UyWYvUqCOKKDFb7xJeGziblY8MyaEIZ-Z2_bdwbm5.jpg"
+                  alt="Skyline Jazz Night" loading="lazy">
+                <div class="position-absolute top-0 start-0 m-3">
+                  <span class="badge-demo">JAZZ QUARTET</span>
+                </div>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="small mb-2" style="color: var(--champagne-gold);">
+                  <i class="bi bi-calendar3 me-1"></i> [Date Placeholder: Every Thursday] • [Time: 8:00 PM]
+                </div>
+                <h3 class="h3 mb-2">Skyline Jazz Night</h3>
+                <p class="small mb-4 flex-grow-1">Smooth brass improvisations and upright bass rhythms paired with our
+                  Rooftop Old Fashioned and cellar wines.</p>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top"
+                  style="border-color: var(--subtle-border) !important;">
+                  <a href="dashboard.html#book-table" class="link-gold-underline">Reserve a Table <i
+                      class="bi bi-arrow-right"></i></a>
+                  <button type="button" class="icon-btn" data-event-spotlight data-event-title="Skyline Jazz Night"
+                    data-event-date="[Demo Date Placeholder: Thursdays]" data-event-time="8:00 PM – 11:30 PM"
+                    data-event-desc="Live saxophone and piano quartet overlooking the metropolitan skyline."
+                    title="View Event Info"><i class="bi bi-info-lg"></i></button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 2. Sunset Acoustic Sessions -->
+          <div class="col-md-6 col-lg-4">
+            <article class="event-poster-card h-100">
+              <div class="event-poster-img">
+                <img src="assets/images/AUyNX-TjOq1BqzDUzvah1E7KIeIhG6IjVkAUdhYrZEr01qk2gxDLTxHIPj4Ua7T-U9cXLfGBArXraKLPz7oAKkQwOZSutDGQjb1P8d-U4qmP2gDIPHJt0fRNCSj9vZS3vwkQBYwLThayfHtk30zPPCZl2NKXSGMuTdXdSsvWny8.jpg"
+                  alt="Sunset Acoustic Sessions" loading="lazy">
+                <div class="position-absolute top-0 start-0 m-3">
+                  <span class="badge-demo">GOLDEN HOUR</span>
+                </div>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="small mb-2" style="color: var(--champagne-gold);">
+                  <i class="bi bi-calendar3 me-1"></i> [Date Placeholder: Sundays] • [Time: 6:00 PM]
+                </div>
+                <h3 class="h3 mb-2">Sunset Acoustic Sessions</h3>
+                <p class="small mb-4 flex-grow-1">Unplugged acoustic guitar and soulful vocals as the horizon
+                  transitions from golden hour into twilight.</p>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top"
+                  style="border-color: var(--subtle-border) !important;">
+                  <a href="dashboard.html#book-table" class="link-gold-underline">Reserve a Table <i
+                      class="bi bi-arrow-right"></i></a>
+                  <button type="button" class="icon-btn" data-event-spotlight
+                    data-event-title="Sunset Acoustic Sessions" data-event-date="[Demo Date Placeholder: Sundays]"
+                    data-event-time="6:00 PM – 9:30 PM"
+                    data-event-desc="Golden hour unplugged acoustic sessions paired with signature spritzes and mezze platters."
+                    title="View Event Info"><i class="bi bi-info-lg"></i></button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 3. Rooftop DJ Experience -->
+          <div class="col-md-6 col-lg-4">
+            <article class="event-poster-card h-100">
+              <div class="event-poster-img">
+                <img src="assets/images/Ss9y01lCzCKlU2tG9QD8VU_5Nbd1OxO7rnibxMKAlrEor2Xle9_8ckORHi_V89_v89watF-MB9LI-yoC6hLrpuusu8jcaQfatitkA9mZeGG1TBloT8HvPKCrUGyAyIrYOPb9OeexGq-NCEzTaDOQrjuEhNJD5_70bEaTjcvP8kc.jpg"
+                  alt="Rooftop DJ Experience" loading="lazy">
+                <div class="position-absolute top-0 start-0 m-3">
+                  <span class="badge-demo">DJ SHOWCASE</span>
+                </div>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="small mb-2" style="color: var(--champagne-gold);">
+                  <i class="bi bi-calendar3 me-1"></i> [Date Placeholder: Saturdays] • [Time: 9:30 PM]
+                </div>
+                <h3 class="h3 mb-2">Rooftop DJ Experience</h3>
+                <p class="small mb-4 flex-grow-1">Guest selectors spinning melodic house, nu-disco and ambient lounge
+                  tracks from our elevated sky-deck booth.</p>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top"
+                  style="border-color: var(--subtle-border) !important;">
+                  <a href="dashboard.html#book-table" class="link-gold-underline">Reserve a Table <i
+                      class="bi bi-arrow-right"></i></a>
+                  <button type="button" class="icon-btn" data-event-spotlight data-event-title="Rooftop DJ Experience"
+                    data-event-date="[Demo Date Placeholder: Saturdays]" data-event-time="9:30 PM – 1:30 AM"
+                    data-event-desc="Curated nightlife soundtrack and bespoke lounge table service under the open sky."
+                    title="View Event Info"><i class="bi bi-info-lg"></i></button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 4. Friday Lounge Nights -->
+          <div class="col-md-6 col-lg-4">
+            <article class="event-poster-card h-100">
+              <div class="event-poster-img">
+                <img src="assets/images/CslP5rRvnt--lo-A9eKTiCd5KRycFI8S9WIaI3jZxjqhcV8nU0wUl0dGXKdH0gsieVJCtfilVe81YXOocFIAF0os7CHlfBwZDlX-hih842l-8vZUNCSPvmJCupA_u12RpK52rX0gLuLZw6egurx_n6pCYTxDsqKzM7IGNtfZQ04.jpg"
+                  alt="Friday Lounge Nights" loading="lazy">
+                <div class="position-absolute top-0 start-0 m-3">
+                  <span class="badge-demo">LOUNGE NIGHT</span>
+                </div>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="small mb-2" style="color: var(--champagne-gold);">
+                  <i class="bi bi-calendar3 me-1"></i> [Date Placeholder: Fridays] • [Time: 8:30 PM]
+                </div>
+                <h3 class="h3 mb-2">Friday Lounge Nights</h3>
+                <p class="small mb-4 flex-grow-1">Kick off the weekend with botanical cocktail flights, vinyl lounge
+                  grooves and elevated social dining.</p>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top"
+                  style="border-color: var(--subtle-border) !important;">
+                  <a href="dashboard.html#book-table" class="link-gold-underline">Reserve a Table <i
+                      class="bi bi-arrow-right"></i></a>
+                  <button type="button" class="icon-btn" data-event-spotlight data-event-title="Friday Lounge Nights"
+                    data-event-date="[Demo Date Placeholder: Fridays]" data-event-time="8:30 PM – 1:00 AM"
+                    data-event-desc="Weekend opening soirée featuring mixologist tasting flights and vinyl lounge sets."
+                    title="View Event Info"><i class="bi bi-info-lg"></i></button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 5. Live Band Evenings -->
+          <div class="col-md-6 col-lg-4">
+            <article class="event-poster-card h-100">
+              <div class="event-poster-img">
+                <img src="assets/images/a4DqLqAIonbY6oPEdDBYq2LMEWT8wT4v0pbMfEZAotkZB2sWzX3rGF_zU-9RLps87KAcGOfiPLq1fRqHHMWA2GqDph-U0PD5rxuz1UX6C6W-1L8daLws_kquPVjRjXX4Jb22EGoLl6zU68Kwyp-VDqZqF_-sojToUv7Ypa28aUM.jpg"
+                  alt="Live Band Evenings" loading="lazy">
+                <div class="position-absolute top-0 start-0 m-3">
+                  <span class="badge-demo">LIVE ENSEMBLE</span>
+                </div>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="small mb-2" style="color: var(--champagne-gold);">
+                  <i class="bi bi-calendar3 me-1"></i> [Date Placeholder: Bi-Weekly] • [Time: 8:30 PM]
+                </div>
+                <h3 class="h3 mb-2">Live Band Evenings</h3>
+                <p class="small mb-4 flex-grow-1">Contemporary soul, R&amp;B and fusion ensembles bringing vibrant stage
+                  presence to the rooftop amphitheatre.</p>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top"
+                  style="border-color: var(--subtle-border) !important;">
+                  <a href="dashboard.html#book-table" class="link-gold-underline">Reserve a Table <i
+                      class="bi bi-arrow-right"></i></a>
+                  <button type="button" class="icon-btn" data-event-spotlight data-event-title="Live Band Evenings"
+                    data-event-date="[Demo Date Placeholder: Select Weekends]" data-event-time="8:30 PM – Midnight"
+                    data-event-desc="Full-piece contemporary soul and fusion bands performing live under the stars."
+                    title="View Event Info"><i class="bi bi-info-lg"></i></button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 6. Special Celebration Nights -->
+          <div class="col-md-6 col-lg-4">
+            <article class="event-poster-card h-100">
+              <div class="event-poster-img">
+                <img src="assets/images/drNFxgCDI8BfXhM_YaRIJbuZDghXmxLAVrBPlcLUXvKmLEz_NIKwx92BDuFWVrZJpiNPeYammyOv4wCvu9q78PMFrR4VP-8stzR2_gpN_dO1rPoej7tTzuq7Kymc4Jkw7H6GQIdulJNvw0mSBXrnZIr2yhLmU3QiMtK9-43Due40_Zeq.jpg"
+                  alt="Special Celebration Nights" loading="lazy">
+                <div class="position-absolute top-0 start-0 m-3">
+                  <span class="badge-demo">EXCLUSIVE GALA</span>
+                </div>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="small mb-2" style="color: var(--champagne-gold);">
+                  <i class="bi bi-calendar3 me-1"></i> [Date Placeholder: Monthly Edition] • [Time: 8:00 PM]
+                </div>
+                <h3 class="h3 mb-2">Special Celebration Nights</h3>
+                <p class="small mb-4 flex-grow-1">Themed chef tasting dinners, champagne sabrage rituals and guest
+                  artist performances for milestone evenings.</p>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top"
+                  style="border-color: var(--subtle-border) !important;">
+                  <a href="dashboard.html#book-table" class="link-gold-underline">Reserve a Table <i
+                      class="bi bi-arrow-right"></i></a>
+                  <button type="button" class="icon-btn" data-event-spotlight
+                    data-event-title="Special Celebration Nights"
+                    data-event-date="[Demo Date Placeholder: Monthly Gala]" data-event-time="8:00 PM Onwards"
+                    data-event-desc="Curated five-course culinary and mixology showcase celebrating unforgettable nights."
+                    title="View Event Info"><i class="bi bi-info-lg"></i></button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3 – WEEKLY ENTERTAINMENT SCHEDULE
+         ====================================================================== -->
+    <section class="section-padding surface-charcoal" id="weekly-entertainment">
+      <div class="container-luxury">
+        <div class="row align-items-end mb-5 reveal-up">
+          <div class="col-lg-8">
+            <span class="eyebrow-label">RESIDENT SOUNDTRACK</span>
+            <h2 class="section-title mb-0">WEEKLY ENTERTAINMENT PROGRAM.</h2>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <span class="badge-demo"><i class="bi bi-pencil-square me-1"></i> Editable Demo Schedule</span>
+          </div>
+        </div>
+
+        <div class="border reveal-up"
+          style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+          <!-- Wednesday -->
+          <div class="weekly-schedule-row">
+            <div>
+              <span class="text-uppercase fw-bold"
+                style="color: var(--champagne-gold); letter-spacing: 0.16em; font-size: 0.78rem;">WEDNESDAY</span>
+              <div class="small text-muted">7:00 PM – 10:30 PM (Demo)</div>
+            </div>
+            <div>
+              <h3 class="h4 mb-1">Acoustic Evening</h3>
+              <p class="small mb-0">Intimate unplugged guitar and vocal sets accompanying mid-week skyline dining and
+                wine pours.</p>
+            </div>
+            <div>
+              <a href="dashboard.html#book-table" class="btn-outline-gold py-2 px-3">Book Table</a>
+            </div>
+          </div>
+
+          <!-- Thursday -->
+          <div class="weekly-schedule-row">
+            <div>
+              <span class="text-uppercase fw-bold"
+                style="color: var(--champagne-gold); letter-spacing: 0.16em; font-size: 0.78rem;">THURSDAY</span>
+              <div class="small text-muted">8:00 PM – 11:30 PM (Demo)</div>
+            </div>
+            <div>
+              <h3 class="h4 mb-1">Lounge Sessions</h3>
+              <p class="small mb-0">Deep ambient grooves, live saxophone interludes and craft cocktail tasting flights
+                at the marble bar.</p>
+            </div>
+            <div>
+              <a href="dashboard.html#book-table" class="btn-outline-gold py-2 px-3">Book Table</a>
+            </div>
+          </div>
+
+          <!-- Friday -->
+          <div class="weekly-schedule-row">
+            <div>
+              <span class="text-uppercase fw-bold"
+                style="color: var(--champagne-gold); letter-spacing: 0.16em; font-size: 0.78rem;">FRIDAY</span>
+              <div class="small text-muted">9:00 PM – 1:30 AM (Demo)</div>
+            </div>
+            <div>
+              <h3 class="h4 mb-1">DJ Night</h3>
+              <p class="small mb-0">High-energy melodic house and contemporary club rhythms from resident and
+                international guest DJs.</p>
+            </div>
+            <div>
+              <a href="dashboard.html#book-table" class="btn-outline-gold py-2 px-3">Book Table</a>
+            </div>
+          </div>
+
+          <!-- Saturday -->
+          <div class="weekly-schedule-row">
+            <div>
+              <span class="text-uppercase fw-bold"
+                style="color: var(--champagne-gold); letter-spacing: 0.16em; font-size: 0.78rem;">SATURDAY</span>
+              <div class="small text-muted">8:30 PM – 1:30 AM (Demo)</div>
+            </div>
+            <div>
+              <h3 class="h4 mb-1">Live Music</h3>
+              <p class="small mb-0">Signature full-ensemble jazz, soul and fusion performances followed by late-night
+                skyline lounge sets.</p>
+            </div>
+            <div>
+              <a href="dashboard.html#book-table" class="btn-outline-gold py-2 px-3">Book Table</a>
+            </div>
+          </div>
+
+          <!-- Sunday -->
+          <div class="weekly-schedule-row" style="border-block-end: none;">
+            <div>
+              <span class="text-uppercase fw-bold"
+                style="color: var(--champagne-gold); letter-spacing: 0.16em; font-size: 0.78rem;">SUNDAY</span>
+              <div class="small text-muted">5:30 PM – 10:00 PM (Demo)</div>
+            </div>
+            <div>
+              <h3 class="h4 mb-1">Sunset Sessions</h3>
+              <p class="small mb-0">Relaxed golden-hour chillout beats, acoustic strings and signature spritzes as the
+                sun dips below the city.</p>
+            </div>
+            <div>
+              <a href="dashboard.html#book-table" class="btn-outline-gold py-2 px-3">Book Table</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4 – EVENT EXPERIENCE
+         ====================================================================== -->
+    <section class="section-padding surface-ivory" id="event-experience">
+      <div class="container-luxury">
+        <div class="text-center mb-5 reveal-up">
+          <span class="eyebrow-label">IMMERSIVE ATMOSPHERE</span>
+          <h2 class="section-title mb-2">THE ROOFTOP EVENT EXPERIENCE.</h2>
+          <p class="mx-auto" style="max-width: 640px;">Designed with concert-grade acoustic clarity, intimate lounge
+            zoning and panoramic skyline sightlines.</p>
+        </div>
+
+        <div class="row g-4 reveal-up">
+          <div class="col-sm-6 col-lg-3">
+            <div class="p-3 border h-100" style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+              <img src="assets/images/AUyNX-TjOq1BqzDUzvah1E7KIeIhG6IjVkAUdhYrZEr01qk2gxDLTxHIPj4Ua7T-U9cXLfGBArXraKLPz7oAKkQwOZSutDGQjb1P8d-U4qmP2gDIPHJt0fRNCSj9vZS3vwkQBYwLThayfHtk30zPPCZl2NKXSGMuTdXdSsvWny8.jpg"
+                alt="Live musicians" style="aspect-ratio:4/3; object-fit:cover; width:100%;" class="mb-3"
+                loading="lazy">
+              <h3 class="h4 mb-1">Live Musicians</h3>
+              <p class="small mb-0">Curated acoustic artists, jazz quartets and vocalists
+                performing on our elevated terrace stage.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <div class="p-3 border h-100" style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+              <img src="assets/images/Ss9y01lCzCKlU2tG9QD8VU_5Nbd1OxO7rnibxMKAlrEor2Xle9_8ckORHi_V89_v89watF-MB9LI-yoC6hLrpuusu8jcaQfatitkA9mZeGG1TBloT8HvPKCrUGyAyIrYOPb9OeexGq-NCEzTaDOQrjuEhNJD5_70bEaTjcvP8kc.jpg"
+                alt="DJ performance" style="aspect-ratio:4/3; object-fit:cover; width:100%;" class="mb-3"
+                loading="lazy">
+              <h3 class="h4 mb-1">DJ Performance</h3>
+              <p class="small mb-0">State-of-the-art sound design delivering warm, conversational
+                lounge audio and vibrant dancefloor energy.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <div class="p-3 border h-100" style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+              <img src="assets/images/CslP5rRvnt--lo-A9eKTiCd5KRycFI8S9WIaI3jZxjqhcV8nU0wUl0dGXKdH0gsieVJCtfilVe81YXOocFIAF0os7CHlfBwZDlX-hih842l-8vZUNCSPvmJCupA_u12RpK52rX0gLuLZw6egurx_n6pCYTxDsqKzM7IGNtfZQ04.jpg"
+                alt="Lounge seating" style="aspect-ratio:4/3; object-fit:cover; width:100%;" class="mb-3"
+                loading="lazy">
+              <h3 class="h4 mb-1">Lounge Seating</h3>
+              <p class="small mb-0">Semi-private velvet booths and fire-lit terrace sofas with
+                dedicated tableside cocktail service.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <div class="p-3 border h-100" style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+              <img src="assets/images/a53r4NAtYaumqUw8YiulIhFtpXryR3FYiPUMSzsvZnyIkfULWgmEDA5tNU34FaQacAt1SPV4eoawuo0V2wcsGKOiA53rnPyQQSqVXDRmJhqEmhPcRppcUChFcgz9mAXB7KqCcwgMM6njW8-UpoW9BZqhMxH9Xz_FBIpm2hRMkoRmYPtB.jpg"
+                alt="Nighttime atmosphere" style="aspect-ratio:4/3; object-fit:cover; width:100%;" class="mb-3"
+                loading="lazy">
+              <h3 class="h4 mb-1">Nighttime Atmosphere</h3>
+              <p class="small mb-0">Architectural warm lighting and city reflections creating an
+                unforgettable nocturnal sanctuary.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5 – EVENT RESERVATION CTA
+         ====================================================================== -->
+    <section class="section-padding surface-burgundy-accent text-center" id="event-reservation-cta">
+      <div class="container-luxury py-3 reveal-up">
+        <span class="eyebrow-label">VIP &amp; EVENT TABLE BOOKINGS</span>
+        <h2 class="display-hero text-white mb-4" style="font-size: clamp(2.2rem, 4.5vw, 4rem);">
+          SAVE YOUR SPOT FOR THE NIGHT.
+        </h2>
+        <p class="lead mx-auto mb-4" style="color: var(--text-secondary); max-width: 600px;">
+          Reserve preferred stage-side lounge seating or a skyline dining table for our upcoming live music evenings.
+        </p>
+        <a href="dashboard.html#book-table" class="btn-gold">
+          RESERVE YOUR TABLE <i class="bi bi-calendar2-check"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Event Spotlight Modal -->
+  <div class="rooftop-modal-backdrop" id="eventSpotlightModal" role="dialog" aria-modal="true"
+    aria-labelledby="spotlightEventTitle">
+    <div class="rooftop-modal-dialog">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <span class="badge-demo">DEMO EVENT SPOTLIGHT</span>
+        <button type="button" class="icon-btn" id="closeEventSpotlightBtn" aria-label="Close Modal">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <h3 class="h3 mb-2" id="spotlightEventTitle">Event Title</h3>
+      <p class="small mb-3" style="color: var(--champagne-gold);" id="spotlightEventMeta">Date &amp; Time</p>
+      <p class="mb-4" id="spotlightEventDesc">Event Description</p>
+      <div class="d-flex justify-content-end gap-2 pt-3 border-top"
+        style="border-color: var(--subtle-border) !important;">
+        <a href="dashboard.html#book-table" class="btn-gold py-2 px-3">Reserve a Table for This Event</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       GLOBAL PREMIUM FOOTER (SECTION 34)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container-luxury">
+      <div class="row g-5 pb-5 border-bottom" style="border-color: var(--subtle-border) !important;">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5" />
+              <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5" />
+              <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5" />
+              <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5" />
+              <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5" />
+              <circle cx="46" cy="14" r="3" fill="#D6B878" />
+            </svg>
+            <div class="brand-logo-text">
+              <span class="brand-wordmark">ROOFTOP</span>
+              <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+            </div>
+          </a>
+          <p class="small text-uppercase mb-2" style="letter-spacing: 0.18em; color: var(--champagne-gold);">
+            ABOVE THE CITY. BEYOND THE ORDINARY.
+          </p>
+          <p class="small mb-4">
+            "Where extraordinary skyline views meet unforgettable dining, signature cocktails and unforgettable nights."
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="footer-heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h3 class="footer-heading">Experience</h3>
+          <ul class="footer-links">
+            <li><a href="menu.html">Rooftop Dining</a></li>
+            <li><a href="home-2.html#signature-experiences">Lounge</a></li>
+            <li><a href="events.html">Live Music</a></li>
+            <li><a href="dashboard.html#book-table">Private Celebrations</a></li>
+            <li><a href="dashboard.html#loyalty">Guest Loyalty Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-3">
+          <h3 class="footer-heading">Contact (Demo Placeholders)</h3>
+          <ul class="footer-links">
+            <li>
+              <i class="bi bi-geo-alt me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Address Placeholder: Sky-Deck Level, Metropolitan Tower]</span>
+            </li>
+            <li>
+              <i class="bi bi-telephone me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Phone Placeholder: +91 00000 00000]</span>
+            </li>
+            <li>
+              <i class="bi bi-envelope me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Email Placeholder: reservations@rooftop-demo.com]</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-between align-items-center pt-4 gap-3 small"
+        style="color: var(--muted-grey);">
+        <div>© 2026 ROOFTOP RESTAURANT &amp; LOUNGE BAR. ALL RIGHTS RESERVED.</div>
+        <div>Frontend Prototype • Demo Persistence via localStorage</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROOFTOP — Welcome Back | Guest Portal Sign In</title>
+  <meta name="description" content="Sign in to the ROOFTOP Guest Portal to access your customer dashboard, table reservations and membership privileges.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+
+  <main class="auth-page-layout">
+    <!-- Top Right Corner Controls (Positioned cleanly without card overlap) -->
+    <div class="auth-corner-actions">
+      <button type="button" class="icon-btn" data-rtl-toggle title="Toggle LTR/RTL Direction">
+        <span class="dir-label">RTL</span>
+      </button>
+      <button type="button" class="icon-btn" data-theme-toggle title="Toggle Dark/Light Mode">
+        <i class="bi bi-sun"></i>
+      </button>
+    </div>
+
+    <!-- Centered Login Card -->
+    <div class="auth-card">
+      <!-- Brand Logo Badge -->
+      <a href="index.html" class="auth-brand-badge" aria-label="ROOFTOP Home">
+        <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5"/>
+          <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5"/>
+          <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5"/>
+          <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5"/>
+          <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5"/>
+          <circle cx="46" cy="14" r="3" fill="#D6B878"/>
+        </svg>
+        <span class="brand-wordmark">ROOFTOP</span>
+      </a>
+
+      <!-- Heading & Subtitle -->
+      <h1 class="auth-title">Welcome Back</h1>
+      <p class="auth-subtitle">Access your guest dashboard, reservations and privileges.</p>
+
+      <!-- Auto-Fill Demo Credentials Banner -->
+      <div class="demo-credentials-banner mb-3 py-2 px-3 small d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <div>
+          Demo: <strong>guest@example.com</strong> / <strong>guest123</strong>
+        </div>
+        <button type="button" class="btn-outline-gold py-1 px-2" id="fillDemoCredentialsBtn" style="font-size: 0.68rem;">
+          <i class="bi bi-magic me-1"></i> Auto-Fill
+        </button>
+      </div>
+
+      <!-- Feedback / Alert -->
+      <div id="loginFeedbackMsg" style="display: none;" role="alert"></div>
+
+      <!-- Login Form -->
+      <form id="guestLoginForm" novalidate>
+        <!-- Email Input with Icon -->
+        <div class="mb-3">
+          <label for="loginEmail" class="form-label-luxury">Email Address</label>
+          <div class="auth-input-group">
+            <i class="bi bi-envelope auth-icon"></i>
+            <input
+              type="email"
+              id="loginEmail"
+              class="auth-input"
+              placeholder="customer@example.com"
+              value="guest@example.com"
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Password Input with Icon & Toggle -->
+        <div class="mb-3">
+          <label for="loginPassword" class="form-label-luxury">Password</label>
+          <div class="auth-input-group">
+            <i class="bi bi-lock auth-icon"></i>
+            <input
+              type="password"
+              id="loginPassword"
+              class="auth-input"
+              placeholder="••••••••"
+              value="guest123"
+              required
+            >
+            <button
+              type="button"
+              id="togglePasswordBtn"
+              class="auth-toggle-pass"
+              aria-label="Toggle Password Visibility"
+            >
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Remember Me & Forgot Password -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 small">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rememberMeCheck" checked>
+            <label class="form-check-label" for="rememberMeCheck">Keep me logged in</label>
+          </div>
+          <a href="#forgot-password" id="forgotPasswordDemoLink" style="color: var(--champagne-gold);">
+            Forgot password?
+          </a>
+        </div>
+
+        <!-- Sign In Submit Button -->
+        <button type="submit" class="auth-btn-submit">Sign In</button>
+
+        <!-- Divider -->
+        <div class="auth-divider">
+          <span>OR CONTINUE WITH</span>
+        </div>
+
+        <!-- Social Buttons -->
+        <div class="row g-2 mb-3">
+          <div class="col-6">
+            <button type="button" class="auth-social-btn" onclick="document.getElementById('fillDemoCredentialsBtn').click();">
+              <i class="bi bi-google text-danger"></i> Google
+            </button>
+          </div>
+          <div class="col-6">
+            <button type="button" class="auth-social-btn" onclick="document.getElementById('fillDemoCredentialsBtn').click();">
+              <i class="bi bi-apple"></i> Apple
+            </button>
+          </div>
+        </div>
+
+        <!-- Switch to Sign Up -->
+        <p class="auth-footer-prompt">
+          Don't have an account? <a href="signup.html" id="createAccountDemoBtn">Create Account</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

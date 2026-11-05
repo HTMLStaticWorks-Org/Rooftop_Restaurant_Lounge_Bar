@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROOFTOP — Home 2 Editorial Luxury | Elevate Your Evenings</title>
+  <meta name="description" content="An extraordinary destination for rooftop dining, carefully crafted drinks and unforgettable city nights.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL STICKY HEADER & NAVIGATION (SECTION 9)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container-luxury">
+      <nav class="navbar-rooftop" aria-label="Primary Navigation">
+        <a href="index.html" class="brand-logo" aria-label="ROOFTOP Restaurant & Lounge Bar Home">
+          <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5"/>
+            <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5"/>
+            <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5"/>
+            <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5"/>
+            <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5"/>
+            <circle cx="46" cy="14" r="3" fill="#D6B878"/>
+          </svg>
+          <div class="brand-logo-text">
+            <span class="brand-wordmark">ROOFTOP</span>
+            <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+          </div>
+        </a>
+
+        <ul class="nav-center">
+          <li><a href="index.html" class="nav-link-rooftop">Home</a></li>
+          <li><a href="home-2.html" class="nav-link-rooftop active">Home 2</a></li>
+          <li><a href="menu.html" class="nav-link-rooftop">Menu</a></li>
+          <li><a href="events.html" class="nav-link-rooftop">Events</a></li>
+          <li><a href="gallery.html" class="nav-link-rooftop">Gallery</a></li>
+          <li><a href="about.html" class="nav-link-rooftop">About</a></li>
+          <li><a href="contact.html" class="nav-link-rooftop">Contact</a></li>
+          <li><a href="dashboard.html" class="btn-gold btn-header-reserve">Dashboard</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="icon-btn" data-rtl-toggle title="Toggle LTR/RTL Direction">
+            <span class="dir-label">RTL</span>
+          </button>
+          <button type="button" class="icon-btn" data-theme-toggle title="Toggle Dark/Light Mode">
+            <i class="bi bi-sun"></i>
+          </button>
+          <a href="login.html" class="nav-login-link"><i class="bi bi-person me-1"></i>Login</a>
+          <button type="button" class="hamburger-btn" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-Out Navigation Drawer -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+  <aside class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Mobile Navigation">
+    <div>
+      <div class="d-flex justify-content-between align-items-center pb-3 border-bottom" style="border-color: var(--subtle-border) !important;">
+        <div class="brand-logo-text">
+          <span class="brand-wordmark">ROOFTOP</span>
+          <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+        </div>
+        <button type="button" class="icon-btn" id="mobileMenuCloseBtn" aria-label="Close Navigation Menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home-2.html" class="active">Home 2</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="login.html"><i class="bi bi-person-circle me-2" style="color:var(--champagne-gold);"></i>Guest Login</a></li>
+      </ul>
+    </div>
+    <div class="pt-3 border-top" style="border-color: var(--subtle-border) !important;">
+      <div class="d-flex gap-2 mb-3">
+        <button type="button" class="btn-outline-gold w-50 py-2" data-theme-toggle>
+          <i class="bi bi-sun"></i> <span class="theme-label">Light Mode</span>
+        </button>
+        <button type="button" class="btn-outline-gold w-50 py-2" data-rtl-toggle>
+          <i class="bi bi-arrow-left-right"></i> <span class="dir-label">RTL</span>
+        </button>
+      </div>
+      <a href="dashboard.html" class="btn-gold w-100">Dashboard</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======================================================================
+         SECTION 1 – EDITORIAL HERO (SPLIT-SCREEN COMPOSITION)
+         ====================================================================== -->
+    <section class="hero-editorial-split" id="editorial-hero">
+      <div class="hero-editorial-left">
+        <span class="eyebrow-label">ARCHITECTURAL SKYLINE LOUNGE</span>
+        <h1 class="display-hero mb-4">
+          ELEVATE YOUR EVENINGS.
+        </h1>
+        <p class="lead mb-4" style="max-width: 540px;">
+          "An extraordinary destination for rooftop dining, carefully crafted drinks and unforgettable city nights."
+        </p>
+        <div class="d-flex flex-wrap gap-3 mb-5">
+          <a href="#art-of-dining" class="btn-gold">
+            DISCOVER ROOFTOP <i class="bi bi-arrow-down-right"></i>
+          </a>
+          <a href="dashboard.html#book-table" class="btn-outline-gold">
+            RESERVE A TABLE
+          </a>
+        </div>
+
+        <div class="row g-4 pt-4 border-top" style="border-color: var(--subtle-border) !important;">
+          <div class="col-4">
+            <div class="font-heading h2 mb-0" style="color: var(--champagne-gold);">270°</div>
+            <div class="small text-uppercase" style="font-size: 0.68rem; letter-spacing: 0.14em;">Panoramic View</div>
+          </div>
+          <div class="col-4">
+            <div class="font-heading h2 mb-0" style="color: var(--champagne-gold);">26+</div>
+            <div class="small text-uppercase" style="font-size: 0.68rem; letter-spacing: 0.14em;">Curated Plates</div>
+          </div>
+          <div class="col-4">
+            <div class="font-heading h2 mb-0" style="color: var(--champagne-gold);">5 Nights</div>
+            <div class="small text-uppercase" style="font-size: 0.68rem; letter-spacing: 0.14em;">Live Music Weekly</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-editorial-right">
+        <img
+          src="assets/images/0LTb-WTREsjRSOHEOMyrggHppQUwjyIWcSTL70g_yfp6JXqwMMPpysvYrDSmUCuh1XWu3reJ1O5-1rHXuNfjXCk1OeGma-LEvILUbqRypuSqwYV0lNZebDV8yTDGE5ejCdoCOxoLKWf_srsMzIiU0FaElUl77eFP91n0k8lXTGc.jpg"
+          alt="Luxury rooftop lounge overlooking the city skyline at night"
+        >
+        <div class="editorial-floating-card float-anim">
+          <span class="badge-gold mb-2">EDITORIAL EDITION</span>
+          <h2 class="h5 text-white mb-1">Above The City. Beyond The Ordinary.</h2>
+          <p class="small mb-0" style="color: var(--text-muted);">Sunset aperitifs, starlight gastronomy and late-night vinyl &amp; jazz sessions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2 – THE ART OF ROOFTOP DINING
+         ====================================================================== -->
+    <section class="section-padding surface-ivory" id="art-of-dining">
+      <div class="container-luxury">
+        <div class="row align-items-end mb-5 reveal-up">
+          <div class="col-lg-6">
+            <span class="eyebrow-label">CHAPTER I • ATMOSPHERE &amp; CRAFT</span>
+            <h2 class="section-title mb-0">THE ART OF ROOFTOP DINING.</h2>
+          </div>
+          <div class="col-lg-6">
+            <p class="mb-0">
+              Designed like an international penthouse sanctuary, our dining room and open-air sky deck frame the city horizon with warm ambient lighting, glass reflections and sculptural culinary plating.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3-Card Balanced Alignment Layout -->
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-4 col-md-6 reveal-up">
+            <div class="p-3 border h-100 d-flex flex-column" style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+              <img
+                src="assets/images/XhTFMLQC79Yq2zNbms0_y9ckcJxVg3eb_kLREhKRYr3ns_1dxnINSsfGCPXaQQ-L0gMixp-IWzegKZLuln6l9Du5JyL2FNbsKLWbpY86sBn8f-nypawrjg2faDNPrr4GIt3RgA64wLcT6PJMfuplVsZARHdAwslPgjR3DmriUyuShBLh.jpg"
+                alt="Elegant dining arrangements on the terrace"
+                style="aspect-ratio: 4/3; object-fit: cover; width: 100%;"
+                loading="lazy"
+              >
+              <div class="pt-3 d-flex flex-column flex-grow-1">
+                <span class="text-uppercase fw-bold" style="font-size:0.68rem; letter-spacing:0.16em; color:var(--champagne-gold);">01 / ARCHITECTURAL SETTING</span>
+                <h3 class="h4 mt-1 mb-2">Elegant Dining Arrangements</h3>
+                <p class="small mb-0 flex-grow-1">Bespoke linen-draped tables, brass candle lamps and unobstructed sightlines to the metropolitan skyline.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal-up">
+            <div class="p-3 border h-100 d-flex flex-column" style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+              <img
+                src="assets/images/k-AcZ5I_xCdzUK6qS3OPQl_sP3-znJ6w_Fj4J7x6s0eTDowMpckTkI8AaFqw_2YKT61NVF0XNHWdyUKSHWJDs81dH5TLZIoFPrZWX9sZy4ZVBgHExHcyO-nIFj_JHgNbTenyzncS4XMivzRb54Z1jnn8Zo6J0s6vxsKbGS4OyTg.jpg"
+                alt="Gourmet dishes presented with culinary precision"
+                style="aspect-ratio: 4/3; object-fit: cover; width: 100%;"
+                loading="lazy"
+              >
+              <div class="pt-3 d-flex flex-column flex-grow-1">
+                <span class="text-uppercase fw-bold" style="font-size:0.68rem; letter-spacing:0.16em; color:var(--champagne-gold);">02 / GASTRONOMY</span>
+                <h3 class="h4 mt-1 mb-2">Gourmet Dishes</h3>
+                <p class="small mb-0 flex-grow-1">Chargrilled prime cuts, sustainable line-caught seafood and truffle-infused vegetarian creations plated as edible art.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 reveal-up">
+            <div class="p-3 border h-100 d-flex flex-column" style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+              <img
+                src="assets/images/CslP5rRvnt--lo-A9eKTiCd5KRycFI8S9WIaI3jZxjqhcV8nU0wUl0dGXKdH0gsieVJCtfilVe81YXOocFIAF0os7CHlfBwZDlX-hih842l-8vZUNCSPvmJCupA_u12RpK52rX0gLuLZw6egurx_n6pCYTxDsqKzM7IGNtfZQ04.jpg"
+                alt="Premium lounge atmosphere at night"
+                style="aspect-ratio: 4/3; object-fit: cover; width: 100%;"
+                loading="lazy"
+              >
+              <div class="pt-3 d-flex flex-column flex-grow-1">
+                <span class="text-uppercase fw-bold" style="font-size:0.68rem; letter-spacing:0.16em; color:var(--champagne-gold);">03 / AMBIENCE</span>
+                <h3 class="h4 mt-1 mb-2">Premium Lounge Atmosphere</h3>
+                <p class="small mb-0 flex-grow-1">Intimate sunken fire-pits and acoustic warmth designed for lingering long past midnight.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3 – SIGNATURE EXPERIENCES
+         ====================================================================== -->
+    <section class="section-padding surface-charcoal" id="signature-experiences">
+      <div class="container-luxury">
+        <div class="text-center mb-5 reveal-up">
+          <span class="eyebrow-label">CHAPTER II • TRILOGY OF TASTE</span>
+          <h2 class="section-title mb-2">SIGNATURE EXPERIENCES.</h2>
+          <p class="mx-auto" style="max-width: 620px;">Three pillars that define every visit to ROOFTOP—from first pour to final course.</p>
+        </div>
+
+        <div class="d-flex flex-column gap-5">
+          <!-- Pillar 1: The Dining Experience -->
+          <div class="row g-0 align-items-stretch border reveal-up" style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+            <div class="col-lg-6">
+              <img src="assets/images/a53r4NAtYaumqUw8YiulIhFtpXryR3FYiPUMSzsvZnyIkfULWgmEDA5tNU34FaQacAt1SPV4eoawuo0V2wcsGKOiA53rnPyQQSqVXDRmJhqEmhPcRppcUChFcgz9mAXB7KqCcwgMM6njW8-UpoW9BZqhMxH9Xz_FBIpm2hRMkoRmYPtB.jpg" alt="The Dining Experience" class="w-100 h-100 object-fit-cover" style="min-height: 340px;" loading="lazy">
+            </div>
+            <div class="col-lg-6 p-4 p-xl-5 d-flex flex-column justify-content-center">
+              <span class="badge-gold align-self-start mb-3">EXPERIENCE 01</span>
+              <h3 class="h2 mb-3">The Dining Experience</h3>
+              <p class="mb-4">
+                Our kitchen celebrates contemporary open-flame grill mastery and delicate Mediterranean-inspired flavours. Whether sharing our Rooftop Signature Platter or savouring Pan-Seared Sea Bass under the stars, every dish is timed to the rhythm of your evening.
+              </p>
+              <div>
+                <a href="menu.html" class="link-gold-underline">Explore Dining Menu <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 2: The Lounge Experience -->
+          <div class="row g-0 align-items-stretch border flex-lg-row-reverse reveal-up" style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+            <div class="col-lg-6">
+              <img src="assets/images/NejsC5A0WkcsnYjfz9y_bR_0hlGP7YRjYlTJ5cOm1K8CUF32fPviTnkYiNdeVoB3-_y02E7-h_iMXrbxmy-Or44icJA4lONGrlk-Qx9pMnCtBjZMl-aWF82gcgjWLyEgSeLuau9N_trTWT4uYEbvQLSSgwztFoABZaf24xrCPZunor6I.jpg" alt="The Lounge Experience" class="w-100 h-100 object-fit-cover" style="min-height: 340px;" loading="lazy">
+            </div>
+            <div class="col-lg-6 p-4 p-xl-5 d-flex flex-column justify-content-center">
+              <span class="badge-gold align-self-start mb-3">EXPERIENCE 02</span>
+              <h3 class="h2 mb-3">The Lounge Experience</h3>
+              <p class="mb-4">
+                Settle into plush architectural booths surrounded by warm brass accents, lush terrace greenery and panoramic skyline glass. Ideal for sunset gatherings, executive conversations and celebratory nights with friends.
+              </p>
+              <div>
+                <a href="dashboard.html#book-table" class="link-gold-underline">Reserve Lounge Seating <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 3: The Cocktail Experience -->
+          <div class="row g-0 align-items-stretch border reveal-up" style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+            <div class="col-lg-6">
+              <img src="assets/images/huZ5234stz9nYCuluxRTGmYMEuCXw3aSxjigXLNHxwge-Tnqj1GcwFSOK0jtWaLMuf7IJl3a6_khyjiEm_R6VAeiacmcRDhkyi6axsICL7qYDIW_umyHugFh2KwVQHqs3gugq0NPrWWhP7Amyx5bTUZcKv8ZY1att44poaDvO44.jpg" alt="The Cocktail Experience" class="w-100 h-100 object-fit-cover" style="min-height: 340px;" loading="lazy">
+            </div>
+            <div class="col-lg-6 p-4 p-xl-5 d-flex flex-column justify-content-center">
+              <span class="badge-gold align-self-start mb-3">EXPERIENCE 03</span>
+              <h3 class="h2 mb-3">The Cocktail Experience</h3>
+              <p class="mb-4">
+                Led by master mixologists, our bar lab crafts botanical distillations, smoked oak infusions and zero-proof elixirs. Signature pours like the Golden Hour Martini and Rooftop Old Fashioned are garnished tableside with theatrical flair.
+              </p>
+              <div>
+                <a href="menu.html" class="link-gold-underline">Discover Signature Cocktails <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4 – THE NIGHTLIFE COLLECTION
+         ====================================================================== -->
+    <section class="section-padding surface-deep-black" id="nightlife-collection">
+      <div class="container-luxury">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5 reveal-up">
+          <div>
+            <span class="eyebrow-label">CHAPTER III • AFTER DARK</span>
+            <h2 class="section-title mb-0">THE NIGHTLIFE COLLECTION.</h2>
+          </div>
+          <span class="badge-demo">Event Poster Showcase • Editable Demo Schedule</span>
+        </div>
+
+        <!-- Event Poster-Inspired Composition -->
+        <div class="row g-4 reveal-up">
+          <div class="col-md-6 col-lg-3">
+            <div class="position-relative overflow-hidden border h-100" style="border-color: var(--champagne-gold) !important; min-height: 440px;">
+              <img src="assets/images/RZ25x8DjtcADh5QeWhENluw_3zAQIJsvYILDdgLY4gjlPlcpRKzR-3qlLYIrw_CWIY6112WpiWZ5favVmMtxrxRNDkXIIvAlyzOQzKfME3UT9uWGK8klU5ARIhL5zAVGY34cHg0UyWYvUqCOKKDFb7xJeGziblY8MyaEIZ-Z2_bdwbm5.jpg" alt="Live Jazz Poster" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
+              <div class="position-relative z-2 h-100 d-flex flex-column justify-content-between p-4 nightlife-poster-overlay">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge-gold">VOL. 01</span>
+                  <span class="small text-uppercase" style="letter-spacing:0.15em; color:var(--champagne-gold);">THURSDAYS</span>
+                </div>
+                <div>
+                  <h3 class="h2 text-white mb-2">Live Jazz</h3>
+                  <p class="small text-white-50 mb-3">Velvet saxophone &amp; upright bass sessions overlooking the illuminated towers.</p>
+                  <a href="events.html" class="link-gold-underline">Explore Lineup <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="position-relative overflow-hidden border h-100" style="border-color: var(--subtle-border) !important; min-height: 440px;">
+              <img src="assets/images/Ss9y01lCzCKlU2tG9QD8VU_5Nbd1OxO7rnibxMKAlrEor2Xle9_8ckORHi_V89_v89watF-MB9LI-yoC6hLrpuusu8jcaQfatitkA9mZeGG1TBloT8HvPKCrUGyAyIrYOPb9OeexGq-NCEzTaDOQrjuEhNJD5_70bEaTjcvP8kc.jpg" alt="DJ Sessions Poster" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
+              <div class="position-relative z-2 h-100 d-flex flex-column justify-content-between p-4 nightlife-poster-overlay">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge-gold">VOL. 02</span>
+                  <span class="small text-uppercase" style="letter-spacing:0.15em; color:var(--champagne-gold);">FRI &amp; SAT</span>
+                </div>
+                <div>
+                  <h3 class="h2 text-white mb-2">DJ Sessions</h3>
+                  <p class="small text-white-50 mb-3">Curated deep house and ambient electronic sets from resident skyline selectors.</p>
+                  <a href="events.html" class="link-gold-underline">Explore Lineup <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="position-relative overflow-hidden border h-100" style="border-color: var(--subtle-border) !important; min-height: 440px;">
+              <img src="assets/images/AUyNX-TjOq1BqzDUzvah1E7KIeIhG6IjVkAUdhYrZEr01qk2gxDLTxHIPj4Ua7T-U9cXLfGBArXraKLPz7oAKkQwOZSutDGQjb1P8d-U4qmP2gDIPHJt0fRNCSj9vZS3vwkQBYwLThayfHtk30zPPCZl2NKXSGMuTdXdSsvWny8.jpg" alt="Acoustic Evenings Poster" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
+              <div class="position-relative z-2 h-100 d-flex flex-column justify-content-between p-4 nightlife-poster-overlay">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge-gold">VOL. 03</span>
+                  <span class="small text-uppercase" style="letter-spacing:0.15em; color:var(--champagne-gold);">WED &amp; SUN</span>
+                </div>
+                <div>
+                  <h3 class="h2 text-white mb-2">Acoustic Evenings</h3>
+                  <p class="small text-white-50 mb-3">Soulful unplugged strings and vocals timed with golden hour sunset cocktails.</p>
+                  <a href="events.html" class="link-gold-underline">Explore Lineup <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="position-relative overflow-hidden border h-100" style="border-color: var(--subtle-border) !important; min-height: 440px;">
+              <img src="assets/images/a4DqLqAIonbY6oPEdDBYq2LMEWT8wT4v0pbMfEZAotkZB2sWzX3rGF_zU-9RLps87KAcGOfiPLq1fRqHHMWA2GqDph-U0PD5rxuz1UX6C6W-1L8daLws_kquPVjRjXX4Jb22EGoLl6zU68Kwyp-VDqZqF_-sojToUv7Ypa28aUM.jpg" alt="Exclusive Event Nights Poster" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
+              <div class="position-relative z-2 h-100 d-flex flex-column justify-content-between p-4 nightlife-poster-overlay">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge-demo">VOL. 04</span>
+                  <span class="small text-uppercase" style="letter-spacing:0.15em; color:var(--champagne-gold);">SPECIAL</span>
+                </div>
+                <div>
+                  <h3 class="h2 text-white mb-2">Exclusive Event Nights</h3>
+                  <p class="small text-white-50 mb-3">Invitation-style tasting soirées, guest chef collaborations and skyline galas.</p>
+                  <a href="events.html" class="link-gold-underline">Explore Lineup <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5 – THE SKYLINE GALLERY (ASYMMETRICAL COLLAGE)
+         ====================================================================== -->
+    <section class="section-padding surface-charcoal" id="skyline-collage">
+      <div class="container-luxury">
+        <div class="row align-items-end mb-5 reveal-up">
+          <div class="col-lg-8">
+            <span class="eyebrow-label">CHAPTER IV • VISUAL CHRONICLE</span>
+            <h2 class="section-title mb-0">THE SKYLINE GALLERY.</h2>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="gallery.html" class="btn-outline-gold">Open Full Lightbox Gallery</a>
+          </div>
+        </div>
+
+        <div class="skyline-time-grid reveal-up">
+          <div class="skyline-slot span-8">
+            <img src="assets/images/pUze8Xur_eIoprbmpwhJGu_3Tl0BeHYCyN9rIl5CagB1LhcPcaKsM5thmMiY3tO_UBvTVUYOUsc_-MN8tLmpJzRj-wYoBSYh-3iUyU2y0Oz9Az6dljd3wR7Hknr3t1JXvMH3QlVoIK0nRMG9e8eoPNJ6AUaDyo3eDWtCBBbWLpQ.jpg" alt="Sunset over rooftop terrace architecture" loading="lazy">
+            <div class="skyline-caption">
+              <span class="badge-gold align-self-start mb-1">SUNSET TERRACE</span>
+              <h3 class="h4 text-white mb-0">Open-Air Architectural Horizon</h3>
+            </div>
+          </div>
+          <div class="skyline-slot span-4">
+            <img src="assets/images/CXjp2a6ti1uM8LvTBB_NF3gJX7I-cQkjToAJPrzwP5RwVlykExala0lYU5l9vsIBG77ApQhYtyaORFHhlR_V7aNjcaXrEZR3AQk5G6_TWaeVUSrzWt46mP0TSBZdpvFd5-MDIS6ZwBEIOdzZVgZF7l9eSQXHmXYS8EQ6VIaykok.jpg" alt="Signature cocktail craft at night" loading="lazy">
+            <div class="skyline-caption">
+              <span class="badge-gold align-self-start mb-1">MIXOLOGY</span>
+              <h3 class="h4 text-white mb-0">Botanical &amp; Smoked Elixirs</h3>
+            </div>
+          </div>
+          <div class="skyline-slot span-4">
+            <img src="assets/images/eG7CpLAfXSvXFL-XKeldnS6ixTZTzzPIL2Tlulccn1A2OCOw7vLQKZHS_5BkBJKZA29Xp6CpcP-T6hch9NJKk9fww9rVGssWR0XpSVVY1WcwQRj8eOERf2JEGQighdkYZ-_fhMxE8DnGQ1t_Wq5Qk5BhnX7Uy1BTz3-JIzpujZQ.jpg" alt="Metropolitan city lights and sunset bar" loading="lazy">
+            <div class="skyline-caption">
+              <span class="badge-gold align-self-start mb-1">GOLDEN HOUR BAR</span>
+              <h3 class="h4 text-white mb-0">Sky-Deck Aperitif Service</h3>
+            </div>
+          </div>
+          <div class="skyline-slot span-8">
+            <img src="assets/images/9_a25Sk84fpLwLm9EvDJhLbFu-DezkTgfqHV6uUKivLFZqjK034Hbjo_qLV6O387MBdL3p3_tE-PMVfAx8OQb3nfrAtUYyRsBMfPYI5VWofXwp_fUxAKQcLyDYmzSwnAg1P2krAx_73VXrEbLPAT2a9UuDPh-9XItAvQYSDtjpE.jpg" alt="Nighttime rooftop fine dining table" loading="lazy">
+            <div class="skyline-caption">
+              <span class="badge-gold align-self-start mb-1">NIGHTTIME DINING</span>
+              <h3 class="h4 text-white mb-0">Candlelit Tables Along The Glass Edge</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6 – FINAL CTA
+         ====================================================================== -->
+    <section class="section-padding surface-burgundy-accent text-center" id="home2-final-cta">
+      <div class="container-luxury py-3 reveal-up">
+        <span class="eyebrow-label">YOUR EVENING AWAITS</span>
+        <h2 class="display-hero text-white mb-4" style="font-size: clamp(2.2rem, 4.5vw, 4rem);">
+          MAKE TONIGHT SOMETHING SPECIAL.
+        </h2>
+        <p class="lead mx-auto mb-4" style="color: var(--text-secondary); max-width: 620px;">
+          Reserve your skyline table or explore our upcoming live music and lounge showcases.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="dashboard.html#book-table" class="btn-gold">
+            BOOK YOUR TABLE <i class="bi bi-calendar2-check"></i>
+          </a>
+          <a href="events.html" class="btn-outline-gold">
+            VIEW UPCOMING EVENTS
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL PREMIUM FOOTER (SECTION 34)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container-luxury">
+      <div class="row g-5 pb-5 border-bottom" style="border-color: var(--subtle-border) !important;">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5"/>
+              <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5"/>
+              <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5"/>
+              <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5"/>
+              <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5"/>
+              <circle cx="46" cy="14" r="3" fill="#D6B878"/>
+            </svg>
+            <div class="brand-logo-text">
+              <span class="brand-wordmark">ROOFTOP</span>
+              <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+            </div>
+          </a>
+          <p class="small text-uppercase mb-2" style="letter-spacing: 0.18em; color: var(--champagne-gold);">
+            ABOVE THE CITY. BEYOND THE ORDINARY.
+          </p>
+          <p class="small mb-4">
+            "Where extraordinary skyline views meet unforgettable dining, signature cocktails and unforgettable nights."
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="footer-heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h3 class="footer-heading">Experience</h3>
+          <ul class="footer-links">
+            <li><a href="menu.html">Rooftop Dining</a></li>
+            <li><a href="home-2.html#signature-experiences">Lounge</a></li>
+            <li><a href="events.html">Live Music</a></li>
+            <li><a href="dashboard.html#book-table">Private Celebrations</a></li>
+            <li><a href="dashboard.html#loyalty">Guest Loyalty Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-3">
+          <h3 class="footer-heading">Contact (Demo Placeholders)</h3>
+          <ul class="footer-links">
+            <li>
+              <i class="bi bi-geo-alt me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Address Placeholder: Sky-Deck Level, Metropolitan Tower]</span>
+            </li>
+            <li>
+              <i class="bi bi-telephone me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Phone Placeholder: +91 00000 00000]</span>
+            </li>
+            <li>
+              <i class="bi bi-envelope me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Email Placeholder: reservations@rooftop-demo.com]</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-between align-items-center pt-4 gap-3 small" style="color: var(--muted-grey);">
+        <div>© 2026 ROOFTOP RESTAURANT &amp; LOUNGE BAR. ALL RIGHTS RESERVED.</div>
+        <div>Frontend Prototype • Demo Persistence via localStorage</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

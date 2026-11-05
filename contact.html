@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROOFTOP — Contact &amp; Concierge | Let's Make Your Next Evening Special</title>
+  <meta name="description"
+    content="Connect with ROOFTOP Restaurant & Lounge Bar for table reservations, private celebrations, event enquiries and guest assistance.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       GLOBAL STICKY HEADER & NAVIGATION (SECTION 9)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container-luxury">
+      <nav class="navbar-rooftop" aria-label="Primary Navigation">
+        <a href="index.html" class="brand-logo" aria-label="ROOFTOP Restaurant & Lounge Bar Home">
+          <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5" />
+            <circle cx="46" cy="14" r="3" fill="#D6B878" />
+          </svg>
+          <div class="brand-logo-text">
+            <span class="brand-wordmark">ROOFTOP</span>
+            <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+          </div>
+        </a>
+
+        <ul class="nav-center">
+          <li><a href="index.html" class="nav-link-rooftop">Home</a></li>
+          <li><a href="home-2.html" class="nav-link-rooftop">Home 2</a></li>
+          <li><a href="menu.html" class="nav-link-rooftop">Menu</a></li>
+          <li><a href="events.html" class="nav-link-rooftop">Events</a></li>
+          <li><a href="gallery.html" class="nav-link-rooftop">Gallery</a></li>
+          <li><a href="about.html" class="nav-link-rooftop">About</a></li>
+          <li><a href="contact.html" class="nav-link-rooftop active">Contact</a></li>
+          <li><a href="dashboard.html" class="btn-gold btn-header-reserve">Dashboard</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="icon-btn" data-rtl-toggle title="Toggle LTR/RTL Direction">
+            <span class="dir-label">RTL</span>
+          </button>
+          <button type="button" class="icon-btn" data-theme-toggle title="Toggle Dark/Light Mode">
+            <i class="bi bi-sun"></i>
+          </button>
+          <a href="login.html" class="nav-login-link"><i class="bi bi-person me-1"></i>Login</a>
+          <button type="button" class="hamburger-btn" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-Out Navigation Drawer -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+  <aside class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Mobile Navigation">
+    <div>
+      <div class="d-flex justify-content-between align-items-center pb-3 border-bottom"
+        style="border-color: var(--subtle-border) !important;">
+        <div class="brand-logo-text">
+          <span class="brand-wordmark">ROOFTOP</span>
+          <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+        </div>
+        <button type="button" class="icon-btn" id="mobileMenuCloseBtn" aria-label="Close Navigation Menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="login.html"><i class="bi bi-person-circle me-2" style="color:var(--champagne-gold);"></i>Guest
+            Login</a></li>
+      </ul>
+    </div>
+    <div class="pt-3 border-top" style="border-color: var(--subtle-border) !important;">
+      <div class="d-flex gap-2 mb-3">
+        <button type="button" class="btn-outline-gold w-50 py-2" data-theme-toggle>
+          <i class="bi bi-sun"></i> <span class="theme-label">Light Mode</span>
+        </button>
+        <button type="button" class="btn-outline-gold w-50 py-2" data-rtl-toggle>
+          <i class="bi bi-arrow-left-right"></i> <span class="dir-label">RTL</span>
+        </button>
+      </div>
+      <a href="dashboard.html" class="btn-gold w-100">Dashboard</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======================================================================
+         CONTACT HERO SECTION
+         ====================================================================== -->
+    <section class="page-hero">
+      <img src="assets/images/NejsC5A0WkcsnYjfz9y_bR_0hlGP7YRjYlTJ5cOm1K8CUF32fPviTnkYiNdeVoB3-_y02E7-h_iMXrbxmy-Or44icJA4lONGrlk-Qx9pMnCtBjZMl-aWF82gcgjWLyEgSeLuau9N_trTWT4uYEbvQLSSgwztFoABZaf24xrCPZunor6I.jpg"
+        alt="Nighttime rooftop lounge terrace" class="hero-bg-media">
+      <div class="hero-overlay"></div>
+      <div class="container-luxury page-hero-content">
+        <span class="eyebrow-label">CONCIERGE &amp; ENQUIRIES</span>
+        <h1 class="display-hero text-white mb-3">
+          LET'S MAKE YOUR NEXT EVENING SPECIAL.
+        </h1>
+        <p class="lead mb-0" style="color: var(--text-secondary);">
+          Reach our guest relations team for table reservations, private skyline events and bespoke celebrations.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT INFO PLACEHOLDERS & FORM (SECTION 16)
+         ====================================================================== -->
+    <section class="section-padding surface-charcoal">
+      <div class="container-luxury">
+        <div class="row g-5">
+          <!-- Left: Editable Contact Placeholders -->
+          <div class="col-lg-5 reveal-up">
+            <span class="eyebrow-label">GUEST RELATIONS</span>
+            <h2 class="section-title mb-3">CONNECT WITH ROOFTOP.</h2>
+            <p class="mb-4">
+              All contact details below are clearly structured as editable client placeholders ready for your venue's
+              final coordinates.
+            </p>
+
+            <div class="d-flex flex-column gap-3">
+              <!-- Address Placeholder -->
+              <div class="p-4 border"
+                style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+                <div class="d-flex align-items-start gap-3">
+                  <i class="bi bi-geo-alt fs-4" style="color: var(--champagne-gold);"></i>
+                  <div>
+                    <span class="badge-gold mb-2">ADDRESS PLACEHOLDER</span>
+                    <h3 class="h5 mb-1">Rooftop Sky-Deck Location</h3>
+                    <p class="small mb-0">[Editable Address Placeholder: Penthouse Level, Metropolitan Skyline Tower,
+                      Financial &amp; Arts District]</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Number Placeholder -->
+              <div class="p-4 border"
+                style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+                <div class="d-flex align-items-start gap-3">
+                  <i class="bi bi-telephone fs-4" style="color: var(--champagne-gold);"></i>
+                  <div>
+                    <span class="badge-gold mb-2">CONTACT NUMBER PLACEHOLDER</span>
+                    <h3 class="h5 mb-1">Reservations &amp; Concierge Desk</h3>
+                    <p class="small mb-0">[Editable Phone Placeholder: +91 (000) 000-0000 / +91 90000 00000]</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email Placeholder -->
+              <div class="p-4 border"
+                style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+                <div class="d-flex align-items-start gap-3">
+                  <i class="bi bi-envelope fs-4" style="color: var(--champagne-gold);"></i>
+                  <div>
+                    <span class="badge-gold mb-2">EMAIL PLACEHOLDER</span>
+                    <h3 class="h5 mb-1">Direct Electronic Enquiries</h3>
+                    <p class="small mb-0">[Editable Email Placeholder: concierge@rooftop-demo.com /
+                      events@rooftop-demo.com]</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Opening Hours Placeholder -->
+              <div class="p-4 border"
+                style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+                <div class="d-flex align-items-start gap-3">
+                  <i class="bi bi-clock-history fs-4" style="color: var(--champagne-gold);"></i>
+                  <div>
+                    <span class="badge-gold mb-2">OPENING HOURS PLACEHOLDER</span>
+                    <h3 class="h5 mb-1">Evening &amp; Nightlife Service Hours</h3>
+                    <p class="small mb-1">[Editable Opening Hours Placeholder:]</p>
+                    <p class="small mb-0">
+                      Sunset &amp; Dinner: 5:30 PM – 11:30 PM (Sample)<br>
+                      Skyline Lounge &amp; Bar: 5:30 PM – 1:30 AM (Sample)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Media Channels -->
+              <div class="p-4 border"
+                style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+                <div class="d-flex align-items-start gap-3">
+                  <i class="bi bi-share fs-4" style="color: var(--champagne-gold);"></i>
+                  <div class="w-100">
+                    <span class="badge-gold mb-2">SOCIAL MEDIA</span>
+                    <h3 class="h5 mb-1">Follow Our Rooftop Journey</h3>
+                    <p class="small mb-3" style="color: var(--text-secondary);">
+                      Stay connected for live saxophone nights, guest chef announcements and sunset photo moments.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="Instagram" title="Instagram">
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="Facebook" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                      <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="WhatsApp" title="WhatsApp Concierge">
+                        <i class="bi bi-whatsapp"></i>
+                      </a>
+                      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="YouTube" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                      </a>
+                      <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="X (Twitter)" title="X (Twitter)">
+                        <i class="bi bi-twitter-x"></i>
+                      </a>
+                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn" aria-label="LinkedIn" title="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="col-lg-7 reveal-up">
+            <div class="p-4 p-md-5 border h-100"
+              style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+                <div>
+                  <span class="eyebrow-label mb-1">SEND A MESSAGE</span>
+                  <h2 class="h2 mb-0">PRIVATE &amp; GENERAL ENQUIRIES</h2>
+                </div>
+                <span class="badge-demo">Frontend Demo Form</span>
+              </div>
+
+              <div id="contactFormFeedback" style="display: none;" role="alert"></div>
+
+              <form id="rooftopContactForm" novalidate>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <label for="contactName" class="form-label-luxury">Full Name *</label>
+                    <input type="text" id="contactName" class="form-control-luxury" placeholder="Enter your full name"
+                      required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contactEmail" class="form-label-luxury">Email *</label>
+                    <input type="email" id="contactEmail" class="form-control-luxury" placeholder="name@example.com"
+                      required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contactPhone" class="form-label-luxury">Phone *</label>
+                    <input type="tel" id="contactPhone" class="form-control-luxury" placeholder="+91 98000 00000"
+                      required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contactSubject" class="form-label-luxury">Subject *</label>
+                    <select id="contactSubject" class="form-select-luxury" required>
+                      <option value="">Select Enquiry Topic</option>
+                      <option value="Table Reservation Assistance">Table Reservation Assistance</option>
+                      <option value="Private Celebration / Event Buyout">Private Celebration / Event Buyout</option>
+                      <option value="Live Music & VIP Lounge Table">Live Music &amp; VIP Lounge Table</option>
+                      <option value="Corporate & Executive Dining">Corporate &amp; Executive Dining</option>
+                      <option value="General Guest Feedback">General Guest Feedback</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="contactMessage" class="form-label-luxury">Message *</label>
+                    <textarea id="contactMessage" rows="5" class="form-control-luxury"
+                      placeholder="Tell us about your preferred evening, guest count, seating preference or special occasion..."
+                      required></textarea>
+                  </div>
+                  <div class="col-12 d-flex flex-wrap justify-content-between align-items-center gap-3 pt-2">
+                    <span class="small text-muted">* Required fields. Validated client-side in this prototype.</span>
+                    <button type="submit" class="btn-gold">
+                      SEND ENQUIRY <i class="bi bi-send"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Architectural Location & Interactive Map -->
+        <div class="mt-5 reveal-up">
+          <div class="p-4 p-md-5 border" style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+            <div class="row align-items-center g-4 mb-4">
+              <div class="col-lg-7">
+                <span class="badge-gold mb-2"><i class="bi bi-geo-alt-fill me-1"></i> SKY-DECK ELEVATOR &amp; VALET ARRIVAL</span>
+                <h3 class="h3 mb-2">LOCATION &amp; DIRECTIONS</h3>
+                <p class="small mb-0" style="color: var(--text-secondary);">
+                  Penthouse Level, Metropolitan Skyline Tower • Express VIP Elevator access directly from the valet portico to the 360° open-air dining terrace.
+                </p>
+              </div>
+              <div class="col-lg-5 text-lg-end d-flex flex-wrap justify-content-lg-end gap-2">
+                <a href="https://maps.google.com/?q=Metropolitan+Skyline+Tower" target="_blank" rel="noopener noreferrer" class="btn-outline-gold">
+                  <i class="bi bi-compass me-1"></i> GET DIRECTIONS
+                </a>
+                <a href="dashboard.html#book-table" class="btn-gold">
+                  RESERVE A TABLE
+                </a>
+              </div>
+            </div>
+
+            <!-- Responsive Interactive Map Frame -->
+            <div class="contact-map-wrapper border" style="border-color: var(--subtle-border) !important;">
+              <iframe
+                title="ROOFTOP Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.687258909867!2d80.2520!3d13.0560!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526639b752945d%3A0x6b77f9859f518e11!2sAnna%20Salai%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL PREMIUM FOOTER (SECTION 34)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container-luxury">
+      <div class="row g-5 pb-5 border-bottom" style="border-color: var(--subtle-border) !important;">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5" />
+              <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5" />
+              <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5" />
+              <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5" />
+              <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5" />
+              <circle cx="46" cy="14" r="3" fill="#D6B878" />
+            </svg>
+            <div class="brand-logo-text">
+              <span class="brand-wordmark">ROOFTOP</span>
+              <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
+            </div>
+          </a>
+          <p class="small text-uppercase mb-2" style="letter-spacing: 0.18em; color: var(--champagne-gold);">
+            ABOVE THE CITY. BEYOND THE ORDINARY.
+          </p>
+          <p class="small mb-4">
+            "Where extraordinary skyline views meet unforgettable dining, signature cocktails and unforgettable nights."
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="footer-heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h3 class="footer-heading">Experience</h3>
+          <ul class="footer-links">
+            <li><a href="menu.html">Rooftop Dining</a></li>
+            <li><a href="home-2.html#signature-experiences">Lounge</a></li>
+            <li><a href="events.html">Live Music</a></li>
+            <li><a href="dashboard.html#book-table">Private Celebrations</a></li>
+            <li><a href="dashboard.html#loyalty">Guest Loyalty Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-3">
+          <h3 class="footer-heading">Contact (Demo Placeholders)</h3>
+          <ul class="footer-links">
+            <li>
+              <i class="bi bi-geo-alt me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Address Placeholder: Sky-Deck Level, Metropolitan Tower]</span>
+            </li>
+            <li>
+              <i class="bi bi-telephone me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Phone Placeholder: +91 00000 00000]</span>
+            </li>
+            <li>
+              <i class="bi bi-envelope me-2" style="color:var(--champagne-gold);"></i>
+              <span>[Editable Email Placeholder: reservations@rooftop-demo.com]</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-between align-items-center pt-4 gap-3 small"
+        style="color: var(--muted-grey);">
+        <div>© 2026 ROOFTOP RESTAURANT &amp; LOUNGE BAR. ALL RIGHTS RESERVED.</div>
+        <div>Frontend Prototype • Demo Persistence via localStorage</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

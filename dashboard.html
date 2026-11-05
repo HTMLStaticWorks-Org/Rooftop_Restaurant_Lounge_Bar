@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Portal &amp; Table Reservations — ROOFTOP Restaurant &amp; Lounge Bar</title>
+  <meta name="description"
+    content="Reserve your skyline table, manage bookings, explore live event nights, and redeem Gold Member loyalty privileges.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+
+  <div class="sidebar-backdrop" id="dashboardSidebarBackdrop"></div>
+
+  <div class="dashboard-shell">
+    <!-- Left Sidebar -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Guest Portal Navigation">
+      <div class="sidebar-brand-header">
+        <a href="index.html" class="brand-logo">
+          <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5" />
+            <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5" />
+            <circle cx="46" cy="14" r="3" fill="#D6B878" />
+          </svg>
+          <div class="brand-logo-text">
+            <span class="brand-wordmark">ROOFTOP</span>
+            <span class="brand-subtitle">GUEST PORTAL</span>
+          </div>
+        </a>
+        <button type="button" class="icon-btn d-lg-none" id="dashSidebarCloseBtn" aria-label="Close Sidebar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <ul class="sidebar-nav">
+        <li><a href="#overview" class="sidebar-nav-link active" data-route="overview"><i class="bi bi-grid-1x2"></i>
+            Guest Overview</a></li>
+        <li><a href="#book-table" class="sidebar-nav-link" data-route="book-table"><i class="bi bi-calendar-plus"></i>
+            Book a Table</a></li>
+        <li><a href="#reservations" class="sidebar-nav-link" data-route="reservations"><i
+              class="bi bi-calendar2-check"></i> My Reservations</a></li>
+        <li><a href="#events" class="sidebar-nav-link" data-route="events"><i class="bi bi-music-note-beamed"></i> Event
+            Nights</a></li>
+        <li><a href="#loyalty" class="sidebar-nav-link" data-route="loyalty"><i class="bi bi-stars"></i> My Loyalty
+            Points</a></li>
+        <li><a href="#rewards" class="sidebar-nav-link" data-route="rewards"><i class="bi bi-gift"></i> Member
+            Rewards</a></li>
+        <li><a href="#history" class="sidebar-nav-link" data-route="history"><i class="bi bi-clock-history"></i>
+            Reservation History</a></li>
+        <li><a href="#profile" class="sidebar-nav-link" data-route="profile"><i class="bi bi-person-gear"></i> Profile
+            &amp; Preferences</a></li>
+        <li><a href="#support" class="sidebar-nav-link" data-route="support"><i class="bi bi-headset"></i> Help &amp;
+            Support</a></li>
+      </ul>
+
+      <!-- Admin / Guest Profile Card (Placed Under Sidebar Navigation) -->
+      <div class="sidebar-guest-card mt-auto">
+        <div class="guest-avatar js-guest-initials">AM</div>
+        <div>
+          <div class="fw-bold text-white js-guest-fullname">Alex Morgan</div>
+          <span class="badge-gold mt-1">GOLD MEMBER</span>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="index.html" class="btn-outline-gold w-100 py-2 mb-2"><i class="bi bi-globe2"></i> Public Website</a>
+        <button type="button" class="btn-burgundy w-100 py-2" data-signout-trigger><i class="bi bi-box-arrow-right"></i>
+          Sign Out</button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button type="button" class="icon-btn dash-mobile-toggle" id="dashSidebarOpenBtn" aria-label="Open Sidebar">
+            <i class="bi bi-list"></i>
+          </button>
+          <div>
+            <span class="small text-uppercase"
+              style="color: var(--champagne-gold); letter-spacing: 0.14em; font-size: 0.68rem;">SKYLINE HOSPITALITY
+              PORTAL</span>
+            <h1 class="h4 mb-0" id="dashboardCurrentViewTitle">Guest Overview</h1>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="icon-btn" data-rtl-toggle title="Toggle LTR/RTL"><span
+              class="dir-label">RTL</span></button>
+          <button type="button" class="icon-btn" data-theme-toggle title="Toggle Dark/Light Mode"><i
+              class="bi bi-sun"></i></button>
+          <a href="#book-table" class="btn-gold py-2 px-3 d-none d-sm-inline-flex" style="font-size: 0.72rem;">+ New
+            Booking</a>
+        </div>
+      </header>
+
+      <div class="dashboard-content-area">
+        <!-- VIEW 1: OVERVIEW -->
+        <section class="dashboard-view active" id="view-overview">
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-icon"><i class="bi bi-calendar2-check"></i></div>
+              <div class="kpi-value" id="kpiUpcomingCount">2</div>
+              <div class="kpi-label">Upcoming Bookings</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon"><i class="bi bi-award"></i></div>
+              <div class="kpi-value" id="kpiCompletedVisits">12</div>
+              <div class="kpi-label">Completed Visits</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon"><i class="bi bi-stars"></i></div>
+              <div class="kpi-value" id="kpiLoyaltyPoints">1,850</div>
+              <div class="kpi-label">Loyalty Points</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon"><i class="bi bi-gift"></i></div>
+              <div class="kpi-value" id="kpiAvailableRewards">4</div>
+              <div class="kpi-label">Available Privileges</div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="dash-panel h-100">
+                <div class="dash-panel-header">
+                  <h2 class="h4 mb-0">Next Skyline Reservation</h2>
+                  <a href="#book-table" class="link-gold-underline">Book Another Table <i class="bi bi-plus-lg"></i></a>
+                </div>
+                <div id="overviewNextReservationBox"></div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="loyalty-gold-card h-100">
+                <span class="badge-gold mb-2">ROOFTOP PRIVILEGE TIER</span>
+                <h3 class="h3 text-white mb-1 js-loyalty-points-val">1,850 Loyalty Points</h3>
+                <p class="small mb-2" style="color: var(--text-secondary);">Gold Member • Priority Horizon Seating</p>
+                <div class="loyalty-progress-track">
+                  <div class="loyalty-progress-bar js-loyalty-progress-bar" style="width: 74%;"></div>
+                </div>
+                <p class="small mb-3" style="color: var(--champagne-gold);" id="loyaltyPointsRemainingText"></p>
+                <a href="#rewards" class="btn-gold py-2 px-3" style="font-size: 0.72rem;">Redeem Member Rewards</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 2: BOOK A TABLE -->
+        <section class="dashboard-view" id="view-book-table">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <div>
+                <span class="eyebrow-label">INSTANT SKY-DECK RESERVATION</span>
+                <h2 class="h3 mb-0">RESERVE YOUR ROOFTOP TABLE</h2>
+              </div>
+              <span class="badge-gold">DEMO PERSISTENCE</span>
+            </div>
+
+            <div id="bookTableFeedback" style="display: none;"></div>
+
+            <form id="dashboardBookTableForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="bookGuestName" class="form-label-luxury">Guest Full Name *</label>
+                  <input type="text" id="bookGuestName" class="form-control-luxury" value="Alex Morgan" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="bookEmail" class="form-label-luxury">Email Address *</label>
+                  <input type="email" id="bookEmail" class="form-control-luxury" value="guest@example.com" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="bookPhone" class="form-label-luxury">Phone Number *</label>
+                  <input type="tel" id="bookPhone" class="form-control-luxury" value="+91 98200 00000" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="bookDate" class="form-label-luxury">Preferred Date *</label>
+                  <input type="date" id="bookDate" class="form-control-luxury" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="bookTime" class="form-label-luxury">Time Slot *</label>
+                  <select id="bookTime" class="form-select-luxury" required>
+                    <option value="18:00">6:00 PM (Golden Hour)</option>
+                    <option value="19:00">7:00 PM (Sunset)</option>
+                    <option value="20:00" selected>8:00 PM (Skyline Dinner)</option>
+                    <option value="21:00">9:00 PM (Live Music)</option>
+                    <option value="22:00">10:00 PM (Late Lounge)</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="bookGuests" class="form-label-luxury">Number of Guests *</label>
+                  <input type="number" id="bookGuests" class="form-control-luxury" min="1" max="20" value="2" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="bookSeating" class="form-label-luxury">Seating Zone *</label>
+                  <select id="bookSeating" class="form-select-luxury">
+                    <option value="Skyline View">Skyline View (Glass-Edge)</option>
+                    <option value="Outdoor Terrace">Outdoor Terrace</option>
+                    <option value="Lounge Seating">Lounge Seating</option>
+                    <option value="Indoor Dining">Indoor Dining</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label for="bookOccasion" class="form-label-luxury">Occasion</label>
+                  <select id="bookOccasion" class="form-select-luxury">
+                    <option value="Date Night">Date Night</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Celebration">Celebration</option>
+                    <option value="Business Dinner">Business Dinner</option>
+                  </select>
+                </div>
+                <div class="col-md-8">
+                  <label for="bookRequests" class="form-label-luxury">Special Requests / Table Notes</label>
+                  <input type="text" id="bookRequests" class="form-control-luxury"
+                    placeholder="e.g. Corner skyline table, sommelier pairing, cake arrangement...">
+                </div>
+                <div class="col-12 pt-2">
+                  <button type="submit" class="btn-gold">CONFIRM SKYLINE RESERVATION <i
+                      class="bi bi-check2-circle ms-1"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- VIEW 3: MY RESERVATIONS -->
+        <section class="dashboard-view" id="view-reservations">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+            <h2 class="h3 mb-0">My Upcoming &amp; Active Reservations</h2>
+            <a href="#book-table" class="btn-gold py-2 px-3">+ Book New Table</a>
+          </div>
+          <div id="myReservationsContainer"></div>
+        </section>
+
+        <!-- VIEW 4: EVENT NIGHTS -->
+        <section class="dashboard-view" id="view-events">
+          <div class="dash-panel mb-4">
+            <h3 class="h4 mb-3">Saved Event Interests</h3>
+            <div id="savedEventsListBox"></div>
+          </div>
+          <div class="row g-4" id="dashboardEventsGrid"></div>
+        </section>
+
+        <!-- VIEW 5: LOYALTY POINTS -->
+        <section class="dashboard-view" id="view-loyalty">
+          <div class="loyalty-gold-card mb-4">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+              <div>
+                <span class="badge-gold mb-2">GOLD MEMBER TIER</span>
+                <h2 class="h2 text-white mb-1 js-loyalty-points-val">1,850 Loyalty Points</h2>
+                <p class="small mb-0" style="color: var(--text-secondary);">Earn 10 points per ₹100 spent on rooftop dining
+                  &amp; mixology.</p>
+              </div>
+              <button type="button" id="resetDemoLoyaltyBtn" class="btn-outline-gold py-2 px-3">Reset Demo
+                Points</button>
+            </div>
+            <div class="loyalty-progress-track">
+              <div class="loyalty-progress-bar js-loyalty-progress-bar" style="width: 74%;"></div>
+            </div>
+          </div>
+          <div class="dash-panel">
+            <h3 class="h4 mb-3">Points Activity Ledger</h3>
+            <div id="loyaltyHistoryList"></div>
+          </div>
+        </section>
+
+        <!-- VIEW 6: MEMBER REWARDS -->
+        <section class="dashboard-view" id="view-rewards">
+          <div id="rewardRedeemFeedback" style="display: none;"></div>
+          <div class="row g-4" id="rewardsCatalogGrid"></div>
+        </section>
+
+        <!-- VIEW 7: RESERVATION HISTORY -->
+        <section class="dashboard-view" id="view-history">
+          <div class="dash-panel">
+            <div class="row g-3 mb-4">
+              <div class="col-md-5">
+                <input type="search" id="historySearchInput" class="form-control-luxury"
+                  placeholder="Search by ID, seating or occasion...">
+              </div>
+              <div class="col-md-4">
+                <select id="historyStatusFilter" class="form-select-luxury">
+                  <option value="All">All Statuses</option>
+                  <option value="Completed">Completed</option>
+                  <option value="Cancelled">Cancelled</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <input type="date" id="historyDateFilter" class="form-control-luxury">
+              </div>
+            </div>
+            <table class="table-luxury">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Party</th>
+                  <th>Seating</th>
+                  <th>Status</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody id="historyTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- VIEW 8: PROFILE & PREFERENCES -->
+        <section class="dashboard-view" id="view-profile">
+          <div class="dash-panel">
+            <h2 class="h4 mb-4">Guest Profile &amp; Dining Preferences</h2>
+            <form id="guestProfileForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="profFirstName" class="form-label-luxury">First Name</label>
+                  <input type="text" id="profFirstName" class="form-control-luxury">
+                </div>
+                <div class="col-md-6">
+                  <label for="profLastName" class="form-label-luxury">Last Name</label>
+                  <input type="text" id="profLastName" class="form-control-luxury">
+                </div>
+                <div class="col-md-6">
+                  <label for="profEmail" class="form-label-luxury">Email</label>
+                  <input type="email" id="profEmail" class="form-control-luxury">
+                </div>
+                <div class="col-md-6">
+                  <label for="profPhone" class="form-label-luxury">Phone</label>
+                  <input type="tel" id="profPhone" class="form-control-luxury">
+                </div>
+                <div class="col-md-6">
+                  <label for="profSeating" class="form-label-luxury">Preferred Seating Zone</label>
+                  <select id="profSeating" class="form-select-luxury">
+                    <option value="Skyline View">Skyline View</option>
+                    <option value="Outdoor Terrace">Outdoor Terrace</option>
+                    <option value="Lounge Seating">Lounge Seating</option>
+                    <option value="Indoor Dining">Indoor Dining</option>
+                  </select>
+                </div>
+                <div class="col-12 pt-2">
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="prefOccasion">
+                    <label class="form-check-label small" for="prefOccasion">Special Occasion &amp; Anniversary
+                      Concierge Reminders</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="prefEvents">
+                    <label class="form-check-label small" for="prefEvents">Priority Invitations to Live Jazz &amp;
+                      Mixology Galas</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="prefReminders">
+                    <label class="form-check-label small" for="prefReminders">SMS &amp; Email Reservation Confirmation
+                      Alerts</label>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="prefPromos">
+                    <label class="form-check-label small" for="prefPromos">Seasonal Chef Tasting Menu
+                      Announcements</label>
+                  </div>
+                  <button type="submit" class="btn-gold">Save Preferences</button>
+                </div>
+              </div>
+            </form>
+            <div id="profileSaveFeedback" style="display: none;"></div>
+          </div>
+        </section>
+
+        <!-- VIEW 9: HELP & SUPPORT -->
+        <section class="dashboard-view" id="view-support">
+          <div class="dash-panel">
+            <h2 class="h4 mb-3">Direct Concierge Assistance</h2>
+            <form id="dashSupportForm">
+              <div class="mb-3">
+                <label for="supportTopic" class="form-label-luxury">Assistance Topic</label>
+                <select id="supportTopic" class="form-select-luxury">
+                  <option value="Table Modification Request">Table Modification Request</option>
+                  <option value="Private Celebration Styling">Private Celebration Styling</option>
+                  <option value="Loyalty Points Inquiry">Loyalty Points Inquiry</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="supportMessage" class="form-label-luxury">Message for Concierge</label>
+                <textarea id="supportMessage" rows="4" class="form-control-luxury"
+                  placeholder="How can our skyline hospitality team assist you?" required></textarea>
+              </div>
+              <button type="submit" class="btn-gold">Send Concierge Request</button>
+            </form>
+            <div id="dashSupportFeedback" style="display: none;"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALS -->
+  <div class="rooftop-modal-backdrop" id="dashResDetailModal">
+    <div class="rooftop-modal-dialog">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="h4 mb-0">Reservation Details</h3>
+        <button type="button" class="icon-btn" data-close-modal><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div id="resDetailBody"></div>
+    </div>
+  </div>
+
+  <div class="rooftop-modal-backdrop" id="dashResEditModal">
+    <div class="rooftop-modal-dialog">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="h4 mb-0">Modify Reservation (<span id="editResIdDisplay"></span>)</h3>
+        <button type="button" class="icon-btn" data-close-modal><i class="bi bi-x-lg"></i></button>
+      </div>
+      <form id="editReservationForm">
+        <div class="row g-3">
+          <div class="col-6">
+            <label class="form-label-luxury">Date</label>
+            <input type="date" id="editResDate" class="form-control-luxury" required>
+          </div>
+          <div class="col-6">
+            <label class="form-label-luxury">Time</label>
+            <input type="text" id="editResTime" class="form-control-luxury" required>
+          </div>
+          <div class="col-6">
+            <label class="form-label-luxury">Guests</label>
+            <input type="number" id="editResGuests" class="form-control-luxury" min="1" max="20" required>
+          </div>
+          <div class="col-6">
+            <label class="form-label-luxury">Seating</label>
+            <select id="editResSeating" class="form-select-luxury">
+              <option value="Skyline View">Skyline View</option>
+              <option value="Outdoor Terrace">Outdoor Terrace</option>
+              <option value="Lounge Seating">Lounge Seating</option>
+              <option value="Indoor Dining">Indoor Dining</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label class="form-label-luxury">Occasion</label>
+            <input type="text" id="editResOccasion" class="form-control-luxury">
+          </div>
+          <div class="col-12">
+            <label class="form-label-luxury">Special Requests</label>
+            <input type="text" id="editResRequests" class="form-control-luxury">
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn-gold w-100">Save Changes</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="rooftop-modal-backdrop" id="dashResCancelModal">
+    <div class="rooftop-modal-dialog">
+      <h3 class="h4 mb-2">Cancel Reservation?</h3>
+      <p class="small mb-4">Are you sure you wish to cancel booking <strong id="cancelResIdLabel"
+          style="color: var(--champagne-gold);"></strong>?</p>
+      <div class="d-flex gap-2 justify-content-end">
+        <button type="button" class="btn-outline-gold py-2 px-3" data-close-modal>Keep Table</button>
+        <button type="button" class="btn-burgundy py-2 px-3" id="confirmCancelResBtn">Confirm Cancellation</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="rooftop-modal-backdrop" id="signOutConfirmModal">
+    <div class="rooftop-modal-dialog">
+      <h3 class="h4 mb-2">Sign Out of Guest Portal?</h3>
+      <p class="small mb-4">Your demo bookings and loyalty points remain saved in your browser's localStorage.</p>
+      <div class="d-flex gap-2 justify-content-end">
+        <button type="button" class="btn-outline-gold py-2 px-3" data-close-modal>Stay Signed In</button>
+        <button type="button" class="btn-gold py-2 px-3" id="confirmSignOutBtn">Sign Out</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

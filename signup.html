@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROOFTOP — Create Account | Join the Skyline Privilege Club</title>
+  <meta name="description" content="Register your ROOFTOP Guest Portal account for priority reservations, skyline dining privileges and welcome loyalty points.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+
+  <main class="auth-page-layout">
+    <!-- Top Right Corner Controls (Positioned cleanly without card overlap) -->
+    <div class="auth-corner-actions">
+      <button type="button" class="icon-btn" data-rtl-toggle title="Toggle LTR/RTL Direction">
+        <span class="dir-label">RTL</span>
+      </button>
+      <button type="button" class="icon-btn" data-theme-toggle title="Toggle Dark/Light Mode">
+        <i class="bi bi-sun"></i>
+      </button>
+    </div>
+
+    <!-- Centered Sign Up Card -->
+    <div class="auth-card">
+      <!-- Brand Logo Badge -->
+      <a href="index.html" class="auth-brand-badge" aria-label="ROOFTOP Home">
+        <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5"/>
+          <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5"/>
+          <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5"/>
+          <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5"/>
+          <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5"/>
+          <circle cx="46" cy="14" r="3" fill="#D6B878"/>
+        </svg>
+        <span class="brand-wordmark">ROOFTOP</span>
+      </a>
+
+      <!-- Heading & Subtitle -->
+      <h1 class="auth-title">Create Account</h1>
+      <p class="auth-subtitle">Join our skyline privilege club for priority reservations &amp; rewards.</p>
+
+      <!-- Feedback / Alert -->
+      <div id="signupFeedbackMsg" style="display: none;" role="alert"></div>
+
+      <!-- Sign Up Form (All Fields One By One Format) -->
+      <form id="guestSignupForm" novalidate>
+        <!-- 1. First Name -->
+        <div class="mb-3">
+          <label for="signupFirstName" class="form-label-luxury">First Name *</label>
+          <div class="auth-input-group">
+            <i class="bi bi-person auth-icon"></i>
+            <input
+              type="text"
+              id="signupFirstName"
+              class="auth-input"
+              placeholder="First name"
+              required
+            >
+          </div>
+        </div>
+
+        <!-- 2. Last Name -->
+        <div class="mb-3">
+          <label for="signupLastName" class="form-label-luxury">Last Name *</label>
+          <div class="auth-input-group">
+            <i class="bi bi-person auth-icon"></i>
+            <input
+              type="text"
+              id="signupLastName"
+              class="auth-input"
+              placeholder="Last name"
+              required
+            >
+          </div>
+        </div>
+
+        <!-- 3. Email Address -->
+        <div class="mb-3">
+          <label for="signupEmail" class="form-label-luxury">Email Address *</label>
+          <div class="auth-input-group">
+            <i class="bi bi-envelope auth-icon"></i>
+            <input
+              type="email"
+              id="signupEmail"
+              class="auth-input"
+              placeholder="customer@example.com"
+              required
+            >
+          </div>
+        </div>
+
+        <!-- 4. Phone Number -->
+        <div class="mb-3">
+          <label for="signupPhone" class="form-label-luxury">Phone Number *</label>
+          <div class="auth-input-group">
+            <i class="bi bi-telephone auth-icon"></i>
+            <input
+              type="tel"
+              id="signupPhone"
+              class="auth-input"
+              placeholder="+91 98200 00000"
+              required
+            >
+          </div>
+        </div>
+
+        <!-- 5. Password -->
+        <div class="mb-3">
+          <label for="signupPassword" class="form-label-luxury">Password *</label>
+          <div class="auth-input-group">
+            <i class="bi bi-lock auth-icon"></i>
+            <input
+              type="password"
+              id="signupPassword"
+              class="auth-input pe-5"
+              placeholder="••••••••"
+              required
+            >
+            <button
+              type="button"
+              id="toggleSignupPassBtn"
+              class="auth-toggle-pass"
+              aria-label="Toggle Password Visibility"
+            >
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. Confirm Password -->
+        <div class="mb-3">
+          <label for="signupConfirmPassword" class="form-label-luxury">Confirm Password *</label>
+          <div class="auth-input-group">
+            <i class="bi bi-shield-lock auth-icon"></i>
+            <input
+              type="password"
+              id="signupConfirmPassword"
+              class="auth-input"
+              placeholder="••••••••"
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Hidden Seating Field for Form Handler -->
+        <input type="hidden" id="signupSeating" value="Skyline View">
+
+        <!-- Checkboxes -->
+        <div class="mb-3 small">
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="signupLoyaltyCheck" checked>
+            <label class="form-check-label" for="signupLoyaltyCheck">
+              Enroll in complimentary Gold Loyalty (+500 points)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="signupTermsCheck" required checked>
+            <label class="form-check-label" for="signupTermsCheck">
+              I agree to the Reservation Policy &amp; Terms *
+            </label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="auth-btn-submit">Create Account</button>
+
+        <!-- Divider -->
+        <div class="auth-divider">
+          <span>OR CONTINUE WITH</span>
+        </div>
+
+        <!-- Social Buttons -->
+        <div class="row g-2 mb-3">
+          <div class="col-6">
+            <button type="button" class="auth-social-btn" onclick="document.getElementById('signupFirstName').value='Alex'; document.getElementById('signupLastName').value='Morgan'; document.getElementById('signupEmail').value='alex.morgan@gmail.com'; document.getElementById('signupPhone').value='+91 98200 00000'; document.getElementById('signupPassword').value='guest123'; document.getElementById('signupConfirmPassword').value='guest123';">
+              <i class="bi bi-google text-danger"></i> Google
+            </button>
+          </div>
+          <div class="col-6">
+            <button type="button" class="auth-social-btn" onclick="document.getElementById('signupFirstName').value='Alex'; document.getElementById('signupLastName').value='Morgan'; document.getElementById('signupEmail').value='alex.morgan@apple.com'; document.getElementById('signupPhone').value='+91 98200 00000'; document.getElementById('signupPassword').value='guest123'; document.getElementById('signupConfirmPassword').value='guest123';">
+              <i class="bi bi-apple"></i> Apple
+            </button>
+          </div>
+        </div>
+
+        <!-- Switch to Sign In -->
+        <p class="auth-footer-prompt">
+          Already have an account? <a href="login.html">Sign In</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
