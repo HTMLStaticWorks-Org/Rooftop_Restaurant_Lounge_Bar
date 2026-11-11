@@ -92,7 +92,7 @@
       category: 'Starters',
       price: 680,
       veg: true,
-      image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=900&q=80',
+      image: 'assets/images/truffle-fries.jpg',
       desc: 'Hand-cut crispy artisanal potatoes tossed in white truffle oil, 24-month aged Parmigiano-Reggiano and fresh rosemary.'
     },
     {
@@ -101,7 +101,7 @@
       category: 'Starters',
       price: 890,
       veg: false,
-      image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=80',
+      image: 'assets/images/crispy-calamari.jpg',
       desc: 'Lightly dusted tender squid rings served with charred lemon, smoked paprika aioli and micro-herb garnish.'
     },
     {
@@ -119,7 +119,7 @@
       category: 'Starters',
       price: 950,
       veg: true,
-      image: 'https://images.unsplash.com/photo-1592417817098-8f3d691a4bf5?auto=format&fit=crop&w=900&q=80',
+      image: 'assets/images/burrata-salad.jpg',
       desc: 'Creamy Pugliese burrata over heirloom tomatoes, aged balsamic pearls, toasted pine nuts and sweet basil oil.'
     },
     // Signature Plates
@@ -167,7 +167,7 @@
       category: 'Main Course',
       price: 2350,
       veg: false,
-      image: 'assets/images/k-AcZ5I_xCdzUK6qS3OPQl_sP3-znJ6w_Fj4J7x6s0eTDowMpckTkI8AaFqw_2YKT61NVF0XNHWdyUKSHWJDs81dH5TLZIoFPrZWX9sZy4ZVBgHExHcyO-nIFj_JHgNbTenyzncS4XMivzRb54Z1jnn8Zo6J0s6vxsKbGS4OyTg.jpg',
+      image: 'assets/images/k-AcZ5I_xCdz.jpg',
       desc: 'Prime tenderloin seared to perfection with bone-marrow herb butter, fondant potato and red wine reduction.'
     },
     {
@@ -242,7 +242,7 @@
       category: 'Signature Cocktails',
       price: 950,
       veg: true,
-      image: 'assets/images/yUOzSeD2BsRGD1266R32esVtZPlnvBnt3LszlGcc9srn8Eap5vTVLKJVOqeCIGBq5fZ3usxZorpCKE5yrRONmllMTlYXHGeLTJS6XPxcAbXqd_CuVLhXunZpQCw0g7CFpuCvVroPMqqEXfRy3UUCLVmTEjBdRPVkILim1OlGftU.jpg',
+      image: 'assets/images/yUOzSeD2BsRG.jpg',
       desc: 'Small-batch botanical gin, saffron-infused dry vermouth, elderflower mist and a 24k edible gold leaf garnish.'
     },
     {
@@ -251,7 +251,7 @@
       category: 'Signature Cocktails',
       price: 880,
       veg: true,
-      image: 'assets/images/CXjp2a6ti1uM8LvTBB_NF3gJX7I-cQkjToAJPrzwP5RwVlykExala0lYU5l9vsIBG77ApQhYtyaORFHhlR_V7aNjcaXrEZR3AQk5G6_TWaeVUSrzWt46mP0TSBZdpvFd5-MDIS6ZwBEIOdzZVgZF7l9eSQXHmXYS8EQ6VIaykok.jpg',
+      image: 'assets/images/CXjp2a6ti1uM.jpg',
       desc: 'Dark aged Caribbean rum, muddled blackberries, fresh garden mint, lime zest and sparkling artisanal soda.'
     },
     {
@@ -260,7 +260,7 @@
       category: 'Signature Cocktails',
       price: 920,
       veg: true,
-      image: 'assets/images/eG7CpLAfXSvXFL-XKeldnS6ixTZTzzPIL2Tlulccn1A2OCOw7vLQKZHS_5BkBJKZA29Xp6CpcP-T6hch9NJKk9fww9rVGssWR0XpSVVY1WcwQRj8eOERf2JEGQighdkYZ-_fhMxE8DnGQ1t_Wq5Qk5BhnX7Uy1BTz3-JIzpujZQ.jpg',
+      image: 'assets/images/eG7CpLAfXSvX.jpg',
       desc: 'Artisanal blood-orange aperitivo, crisp vintage prosecco, rosemary sprig and dehydrated citrus wheel.'
     },
     {
@@ -269,7 +269,7 @@
       category: 'Signature Cocktails',
       price: 1050,
       veg: true,
-      image: 'assets/images/huZ5234stz9nYCuluxRTGmYMEuCXw3aSxjigXLNHxwge-Tnqj1GcwFSOK0jtWaLMuf7IJl3a6_khyjiEm_R6VAeiacmcRDhkyi6axsICL7qYDIW_umyHugFh2KwVQHqs3gugq0NPrWWhP7Amyx5bTUZcKv8ZY1att44poaDvO44.jpg',
+      image: 'assets/images/huZ5234stz9n.jpg',
       desc: 'Single-barrel bourbon infused with toasted oak smoke, aromatic bitters, demerara syrup and orange peel.'
     },
     // Mocktails
@@ -451,8 +451,30 @@
     initLoginPage();
     initSignupPage();
     initEventModalTriggers();
+    initScrollTopButton();
     attachImageFallbacks();
   });
+
+  /* --------------------------------------------------------------------------
+     4B. GLOBAL FLOATING BACK-TO-TOP BUTTON (ALL PAGES)
+     -------------------------------------------------------------------------- */
+  function initScrollTopButton() {
+    let btn = document.getElementById('scrollTopBtn');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.id = 'scrollTopBtn';
+      btn.className = 'scroll-top-btn';
+      btn.setAttribute('aria-label', 'Scroll to top');
+      btn.setAttribute('title', 'Back to Top');
+      btn.innerHTML = '<i class="bi bi-arrow-up"></i>';
+      document.body.appendChild(btn);
+    }
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   /* --------------------------------------------------------------------------
      5. HOME PAGE MENU HIGHLIGHTS FILTER (index.html Section 3)
@@ -533,8 +555,8 @@
             <div class="menu-card-media">
               <img src="${item.image}" alt="${item.name}" loading="lazy">
               <div class="menu-card-badges">
-                <span class="badge-gold">${item.category}</span>
-                ${item.veg ? '<span class="veg-indicator"><i class="bi bi-circle-fill" style="font-size:0.45rem;"></i> VEG</span>' : ''}
+                <span class="badge-gold" style="background-color: rgba(13, 14, 17, 0.94) !important; color: #FFFFFF !important; border: 1.5px solid #D6B878 !important; font-weight: 700 !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);">${item.category}</span>
+                ${item.veg ? '<span class="veg-indicator" style="background-color: rgba(13, 14, 17, 0.94) !important; color: #5CE6A0 !important; border: 1.5px solid #35A66E !important; font-weight: 700 !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);"><i class="bi bi-circle-fill" style="font-size:0.45rem;"></i> VEG</span>' : ''}
               </div>
               <button type="button" class="menu-fav-btn ${isFav ? 'active' : ''}" data-fav-toggle="${item.id}" aria-label="Save ${item.name} to favourites" title="Add to Favourites">
                 <i class="bi ${isFav ? 'bi-heart-fill' : 'bi-heart'}"></i>
@@ -914,14 +936,32 @@
     const confirmPassInput = document.getElementById('signupConfirmPassword');
     const termsCheck = document.getElementById('signupTermsCheck');
     const togglePassBtn = document.getElementById('toggleSignupPassBtn');
+    const toggleConfirmPassBtn = document.getElementById('toggleSignupConfirmPassBtn');
     const feedbackEl = document.getElementById('signupFeedbackMsg');
+    const termsLink = document.getElementById('termsLink');
 
     if (togglePassBtn && passInput) {
       togglePassBtn.addEventListener('click', () => {
         const isPass = passInput.type === 'password';
         passInput.type = isPass ? 'text' : 'password';
-        if (confirmPassInput) confirmPassInput.type = isPass ? 'text' : 'password';
         togglePassBtn.innerHTML = isPass ? '<i class="bi bi-eye-slash"></i>' : '<i class="bi bi-eye"></i>';
+      });
+    }
+
+    if (toggleConfirmPassBtn && confirmPassInput) {
+      toggleConfirmPassBtn.addEventListener('click', () => {
+        const isPass = confirmPassInput.type === 'password';
+        confirmPassInput.type = isPass ? 'text' : 'password';
+        toggleConfirmPassBtn.innerHTML = isPass ? '<i class="bi bi-eye-slash"></i>' : '<i class="bi bi-eye"></i>';
+      });
+    }
+
+    if (termsLink && feedbackEl) {
+      termsLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        feedbackEl.style.display = 'block';
+        feedbackEl.className = 'p-3 mb-3 small text-info border border-info';
+        feedbackEl.innerHTML = '<i class="bi bi-shield-check me-2"></i><strong>Reservation Policy:</strong> Complimentary cancellations up to 2 hours prior to arrival. Gold Loyalty rewards earn 10 points per ₹100 spent.';
       });
     }
 

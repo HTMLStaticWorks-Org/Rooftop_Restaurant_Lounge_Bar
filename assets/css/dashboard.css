@@ -88,8 +88,10 @@
 }
 
 .auth-brand-badge .brand-logo-icon {
-  width: 42px;
-  height: 42px;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
 }
 
 .auth-brand-badge .brand-wordmark {
@@ -279,6 +281,46 @@
   text-decoration: underline;
 }
 
+/* Auth Links Enhanced Hover */
+.auth-link,
+.auth-footer-prompt a,
+.auth-card a:not(.btn-gold):not(.btn-outline-gold):not(.auth-brand-badge) {
+  color: #D6B878 !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+  cursor: pointer;
+}
+
+.auth-link:hover,
+.auth-link:focus-visible,
+.auth-footer-prompt a:hover,
+.auth-footer-prompt a:focus-visible,
+.auth-card a:not(.btn-gold):not(.btn-outline-gold):not(.auth-brand-badge):hover,
+.auth-card a:not(.btn-gold):not(.btn-outline-gold):not(.auth-brand-badge):focus-visible {
+  color: #F5DC9B !important;
+  text-decoration: underline !important;
+  text-shadow: 0 0 10px rgba(245, 220, 155, 0.5) !important;
+}
+
+[data-theme="light"] .auth-link,
+[data-theme="light"] .auth-footer-prompt a,
+[data-theme="light"] .auth-card a:not(.btn-gold):not(.btn-outline-gold):not(.auth-brand-badge) {
+  color: #846422 !important;
+  font-weight: 700;
+}
+
+[data-theme="light"] .auth-link:hover,
+[data-theme="light"] .auth-link:focus-visible,
+[data-theme="light"] .auth-footer-prompt a:hover,
+[data-theme="light"] .auth-footer-prompt a:focus-visible,
+[data-theme="light"] .auth-card a:not(.btn-gold):not(.btn-outline-gold):not(.auth-brand-badge):hover,
+[data-theme="light"] .auth-card a:not(.btn-gold):not(.btn-outline-gold):not(.auth-brand-badge):focus-visible {
+  color: #4A330B !important;
+  text-decoration: underline !important;
+  text-shadow: 0 0 8px rgba(132, 100, 34, 0.3) !important;
+}
+
 /* Legacy Support */
 .login-split-layout {
   min-height: 100vh;
@@ -304,21 +346,21 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.52;
+  opacity: 1;
 }
 
 [data-theme="light"] .login-visual-pane img.bg-cover {
-  opacity: 0.72;
+  opacity: 1;
 }
 
 .login-visual-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(13, 14, 17, 0.7) 0%, rgba(13, 14, 17, 0.4) 50%, rgba(13, 14, 17, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(13, 14, 17, 0.55) 0%, rgba(13, 14, 17, 0.35) 50%, rgba(13, 14, 17, 0.85) 100%);
 }
 
 [data-theme="light"] .login-visual-overlay {
-  background: linear-gradient(180deg, rgba(244, 239, 230, 0.65) 0%, rgba(244, 239, 230, 0.45) 50%, rgba(244, 239, 230, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(13, 14, 17, 0.45) 0%, rgba(13, 14, 17, 0.3) 50%, rgba(13, 14, 17, 0.8) 100%);
 }
 
 .login-visual-content {
@@ -466,19 +508,39 @@
   flex-direction: column;
 }
 
-/* Topbar */
+/* Topbar - Fixed / Sticky while scrolling */
+html, body {
+  overflow-x: clip !important;
+}
+
 .dashboard-topbar {
-  position: sticky;
-  inset-block-start: 0;
-  z-index: 1020;
-  background-color: var(--header-bg-scrolled);
-  backdrop-filter: blur(10px);
-  border-block-end: 1px solid var(--border-color);
+  position: sticky !important;
+  top: 0 !important;
+  inset-block-start: 0 !important;
+  z-index: 1030 !important;
+  background-color: var(--header-bg-scrolled) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-block-end: 1px solid var(--border-color) !important;
   padding: 1rem clamp(1.25rem, 3vw, 2.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.dashboard-topbar.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+  border-block-end-color: rgba(214, 184, 120, 0.35) !important;
+}
+
+[data-theme="light"] .dashboard-topbar {
+  background-color: rgba(244, 239, 230, 0.95) !important;
+}
+
+[data-theme="light"] .dashboard-topbar.scrolled {
+  box-shadow: 0 4px 18px rgba(21, 23, 28, 0.1) !important;
 }
 
 .dashboard-content-area {
@@ -556,6 +618,70 @@
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--text-muted);
+}
+
+
+/* Uniform Input & Select Height for Book a Table Form */
+input.form-control-luxury,
+select.form-select-luxury,
+#dashboardBookTableForm .form-control-luxury,
+#dashboardBookTableForm .form-select-luxury {
+  height: 48px !important;
+  min-height: 48px !important;
+  box-sizing: border-box !important;
+  line-height: 1.4 !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.92rem !important;
+}
+textarea.form-control-luxury {
+  height: auto !important;
+  min-height: 120px !important;
+}
+
+/* Date & Time Picker Icon High Contrast in Dark Mode */
+[data-theme="dark"] input[type="date"],
+[data-theme="dark"] input[type="time"],
+[data-theme="dark"] input[type="datetime-local"],
+input[type="date"].form-control-luxury,
+#historyDateFilter {
+  color-scheme: dark;
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="time"]::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+input[type="date"].form-control-luxury::-webkit-calendar-picker-indicator,
+#historyDateFilter::-webkit-calendar-picker-indicator {
+  filter: invert(88%) sepia(21%) saturate(948%) hue-rotate(352deg) brightness(96%) contrast(92%);
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="dark"] input[type="time"]::-webkit-calendar-picker-indicator:hover,
+input[type="date"].form-control-luxury::-webkit-calendar-picker-indicator:hover,
+#historyDateFilter::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+[data-theme="light"] input[type="date"],
+[data-theme="light"] input[type="time"],
+[data-theme="light"] input[type="datetime-local"] {
+  color-scheme: light;
+}
+
+[data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="light"] input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+[data-theme="dark"] input[type="search"]::-webkit-search-cancel-button {
+  filter: invert(1);
+  cursor: pointer;
 }
 
 /* Dashboard Cards */
@@ -793,6 +919,45 @@
 }
 
 @media (max-width: 767.98px) {
+  /* Book a Table Form Button & Layout Mobile Fixes */
+  .dashboard-content-area {
+    padding: 1rem 0.85rem !important;
+  }
+  .dash-panel {
+    padding: 1.25rem 1rem !important;
+  }
+  #dashboardBookTableForm button[type="submit"],
+  #dashboardBookTableForm .btn-gold,
+  .dash-panel form button[type="submit"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.78rem !important;
+    line-height: 1.35 !important;
+  }
+  .dashboard-topbar {
+    padding: 0.75rem clamp(0.75rem, 2.5vw, 1.25rem) !important;
+    gap: 0.5rem !important;
+  }
+  .dashboard-topbar h1 {
+    font-size: 1.05rem !important;
+  }
+  .dashboard-topbar .btn-gold {
+    display: inline-flex !important;
+    padding: 0.45rem 0.75rem !important;
+    font-size: 0.7rem !important;
+    white-space: nowrap !important;
+  }
+  .dashboard-topbar .icon-btn {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.75rem !important;
+    min-width: 32px !important;
+  }
   .kpi-grid {
     grid-template-columns: 1fr;
   }
@@ -833,4 +998,31 @@
     color: var(--champagne-gold);
     text-align: start;
   }
+}
+
+/* Checkbox & Radio RTL Alignment (Profile & Preferences) */
+[dir="rtl"] .form-check {
+  padding-left: 0 !important;
+  padding-right: 1.65em !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .form-check .form-check-input {
+  float: right !important;
+  margin-left: 0 !important;
+  margin-right: -1.65em !important;
+}
+
+[dir="rtl"] .form-check-label {
+  text-align: right !important;
+}
+
+.form-check-input:checked {
+  background-color: var(--champagne-gold) !important;
+  border-color: var(--champagne-gold) !important;
+}
+
+.form-check-input:focus {
+  border-color: var(--champagne-gold) !important;
+  box-shadow: 0 0 0 0.2rem rgba(214, 184, 120, 0.25) !important;
 }

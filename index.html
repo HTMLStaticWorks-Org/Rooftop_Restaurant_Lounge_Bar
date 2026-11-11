@@ -4,12 +4,338 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ROOFTOP — Restaurant &amp; Lounge Bar | Above The City. Beyond The Ordinary.</title>
+  <!-- Favicon matching brand logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <meta name="description" content="Where extraordinary skyline views meet unforgettable dining, signature cocktails and unforgettable nights.">
   <!-- Bootstrap 5 & Bootstrap Icons CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Custom Rooftop Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
+  <style id="rooftop-critical-fixes">
+        /* Remove white shade on all images & overlays in Light Mode + High-Contrast Hero Headings */
+    .hero-overlay,
+    [data-theme="light"] .hero-overlay,
+    .page-hero .hero-overlay,
+    [data-theme="light"] .page-hero .hero-overlay {
+      background: linear-gradient(180deg, rgba(13, 14, 17, 0.72) 0%, rgba(13, 14, 17, 0.62) 50%, rgba(13, 14, 17, 0.85) 100%) !important;
+    }
+    .hero-bg-media, .page-hero .hero-bg-media, [data-theme="light"] .page-hero .hero-bg-media,
+    .cta-bg-media, [data-theme="light"] .cta-bg-media {
+      opacity: 1 !important;
+    }
+    .page-hero, #final-reservation-cta {
+      background-color: #0D0E11 !important;
+    }
+    .hero-cinematic h1, .hero-cinematic .display-hero, .hero-cinematic .text-white,
+    .page-hero h1, .page-hero .display-hero, .page-hero .text-white,
+    #final-reservation-cta h2, #final-reservation-cta .text-white,
+    [data-theme="light"] .hero-cinematic h1, [data-theme="light"] .hero-cinematic .display-hero, [data-theme="light"] .hero-cinematic .text-white,
+    [data-theme="light"] .page-hero h1, [data-theme="light"] .page-hero .display-hero, [data-theme="light"] .page-hero .text-white,
+    [data-theme="light"] #final-reservation-cta h2, [data-theme="light"] #final-reservation-cta .text-white {
+      color: #FFFFFF !important;
+      text-shadow: 0 3px 18px rgba(0, 0, 0, 0.9) !important;
+    }
+    .hero-cinematic .shimmer-text, [data-theme="light"] .hero-cinematic .shimmer-text {
+      background: linear-gradient(90deg, #FFFFFF 0%, #F5DC9B 50%, #FFFFFF 100%) !important;
+      background-size: 200% auto !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.85));
+    }
+    .hero-cinematic .eyebrow-label, .page-hero .eyebrow-label, #final-reservation-cta .eyebrow-label,
+    [data-theme="light"] .hero-cinematic .eyebrow-label, [data-theme="light"] .page-hero .eyebrow-label, [data-theme="light"] #final-reservation-cta .eyebrow-label {
+      color: #F5DC9B !important;
+      font-weight: 700 !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+    }
+    .hero-cinematic .eyebrow-label::before, .page-hero .eyebrow-label::before, #final-reservation-cta .eyebrow-label::before,
+    [data-theme="light"] .hero-cinematic .eyebrow-label::before, [data-theme="light"] .page-hero .eyebrow-label::before, [data-theme="light"] #final-reservation-cta .eyebrow-label::before {
+      background-color: #F5DC9B !important;
+    }
+    .hero-cinematic .lead, .page-hero .lead, #final-reservation-cta .lead,
+    [data-theme="light"] .hero-cinematic .lead, [data-theme="light"] .page-hero .lead, [data-theme="light"] #final-reservation-cta .lead {
+      color: #FFFFFF !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+    }
+    .hero-editorial-left h1, .hero-editorial-left .display-hero {
+      color: #FFFFFF !important;
+    }
+    [data-theme="light"] .hero-editorial-left h1, [data-theme="light"] .hero-editorial-left .display-hero {
+      color: #0D0E11 !important;
+      font-weight: 700 !important;
+    }
+    [data-theme="light"] .hero-editorial-left .eyebrow-label {
+      color: #5C410D !important;
+      font-weight: 700 !important;
+    }
+    [data-theme="light"] .hero-editorial-left .lead {
+      color: #1E1D1B !important;
+      font-weight: 500 !important;
+    }
+    .experience-card-overlay, [data-theme="light"] .experience-card-overlay {
+      background: linear-gradient(180deg, rgba(13,14,17,0) 40%, rgba(13,14,17,0.88) 100%) !important;
+    }
+    [data-theme="light"] .experience-card-overlay h2, [data-theme="light"] .experience-card-overlay h3,
+    [data-theme="light"] .skyline-caption h3, [data-theme="light"] .skyline-caption h4, [data-theme="light"] .skyline-caption .text-white,
+    [data-theme="light"] .nightlife-poster-overlay h3, [data-theme="light"] .nightlife-poster-overlay .h4, [data-theme="light"] .nightlife-poster-overlay .text-white,
+    [data-theme="light"] .gallery-hover-info h3, [data-theme="light"] .gallery-hover-info .h4, [data-theme="light"] .gallery-hover-info .text-white,
+    [data-theme="light"] .theme-overlay-box h2, [data-theme="light"] .theme-overlay-box .text-white,
+    [data-theme="light"] .editorial-floating-card h2, [data-theme="light"] .editorial-floating-card .text-white {
+      color: #FFFFFF !important;
+    }
+    [data-theme="light"] .experience-card-overlay p, [data-theme="light"] .skyline-caption p, [data-theme="light"] .skyline-caption .small,
+    [data-theme="light"] .nightlife-poster-overlay p, [data-theme="light"] .nightlife-poster-overlay .small,
+    [data-theme="light"] .theme-overlay-box p, [data-theme="light"] .editorial-floating-card p {
+      color: rgba(244, 239, 230, 0.92) !important;
+    }
+    .skyline-caption, [data-theme="light"] .skyline-caption {
+      background: linear-gradient(180deg, transparent 45%, rgba(13, 14, 17, 0.88) 100%) !important;
+    }
+    .nightlife-poster-overlay, [data-theme="light"] .nightlife-poster-overlay {
+      background: linear-gradient(180deg, rgba(13, 14, 17, 0.72) 0%, rgba(13, 14, 17, 0.28) 38%, rgba(13, 14, 17, 0.94) 100%) !important;
+    }
+    .nightlife-poster-overlay h3, [data-theme="light"] .nightlife-poster-overlay h3,
+    [data-theme="light"] .nightlife-poster-overlay .text-white {
+      color: #FFFFFF !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85) !important;
+    }
+    .nightlife-poster-overlay p, [data-theme="light"] .nightlife-poster-overlay p,
+    .nightlife-poster-overlay p.small, [data-theme="light"] .nightlife-poster-overlay p.small {
+      color: #FFFFFF !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.85) !important;
+    }
+    .nightlife-poster-overlay .link-gold-underline,
+    [data-theme="light"] .nightlife-poster-overlay .link-gold-underline {
+      color: #F5DC9B !important;
+      border-bottom-color: #F5DC9B !important;
+      font-weight: 700 !important;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85) !important;
+    }
+    .nightlife-day-tag, [data-theme="light"] .nightlife-day-tag {
+      background-color: rgba(13, 14, 17, 0.9) !important;
+      color: #FFFFFF !important;
+      border: 1px solid rgba(214, 184, 120, 0.75) !important;
+      padding: 0.3rem 0.65rem !important;
+      font-size: 0.68rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.15em !important;
+      border-radius: 2px !important;
+    }
+    [data-theme="light"] #nightlife-collection .eyebrow-label {
+      color: #5C410D !important;
+      font-weight: 700 !important;
+    }
+    .gallery-hover-info, [data-theme="light"] .gallery-hover-info {
+      background: linear-gradient(180deg, rgba(13, 14, 17, 0.12) 0%, rgba(13, 14, 17, 0.45) 45%, rgba(13, 14, 17, 0.92) 100%) !important;
+    }
+    .gallery-item img, .gallery-item:hover img,
+    .event-poster-img img, .event-poster-card:hover .event-poster-img img {
+      filter: none !important;
+      opacity: 1 !important;
+    }
+    .theme-overlay-box, [data-theme="light"] .theme-overlay-box,
+    .editorial-floating-card, [data-theme="light"] .editorial-floating-card {
+      background: rgba(13, 14, 17, 0.86) !important;
+      color: #FFFFFF !important;
+    }
+    /* High-contrast badges on cards & images */
+    .menu-card-badges .badge-gold, [data-theme="light"] .menu-card-badges .badge-gold,
+    [data-theme="light"] .hero-cinematic .badge-gold, [data-theme="light"] .experience-card-overlay .badge-gold,
+    [data-theme="light"] .skyline-caption .badge-gold, [data-theme="light"] .nightlife-poster-overlay .badge-gold,
+    [data-theme="light"] .gallery-hover-info .badge-gold, [data-theme="light"] .theme-overlay-box .badge-gold,
+    [data-theme="light"] .editorial-floating-card .badge-gold {
+      background-color: rgba(13, 14, 17, 0.94) !important;
+      color: #FFFFFF !important;
+      border: 1.5px solid #D6B878 !important;
+      font-weight: 700 !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
+    }
+    .menu-card-badges .veg-indicator, [data-theme="light"] .menu-card-badges .veg-indicator {
+      background-color: rgba(13, 14, 17, 0.94) !important;
+      color: #5CE6A0 !important;
+      border: 1.5px solid #35A66E !important;
+      font-weight: 700 !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
+    }
+    /* High-contrast buttons & uniform button sizes across Hero, Home 2 Hero, Filter Pills & CTAs */
+    [data-theme="light"] .btn-outline-gold {
+      color: #15171C !important;
+      border-color: #846422 !important;
+      font-weight: 700 !important;
+    }
+    [data-theme="light"] .btn-outline-gold:hover {
+      background-color: var(--champagne-gold) !important;
+      color: #FFFFFF !important;
+    }
+    .hero-cinematic .btn-outline-gold, #final-reservation-cta .btn-outline-gold,
+    [data-theme="light"] .hero-cinematic .btn-outline-gold, [data-theme="light"] #final-reservation-cta .btn-outline-gold {
+      background-color: rgba(13, 14, 17, 0.78) !important;
+      color: #FFFFFF !important;
+      border: 1.5px solid #D6B878 !important;
+      font-weight: 700 !important;
+    }
+    .hero-cta-group .btn-gold, .hero-cta-group .btn-outline-gold,
+    .hero-cinematic .btn-gold, .hero-cinematic .btn-outline-gold,
+    .hero-editorial-left .btn-gold, .hero-editorial-left .btn-outline-gold,
+    #final-reservation-cta .btn-gold, #final-reservation-cta .btn-outline-gold,
+    #home2-final-cta .btn-gold, #home2-final-cta .btn-outline-gold,
+    #featured-event .btn-gold, #featured-event .btn-outline-gold,
+    #hospitality-experience .btn-gold, #hospitality-experience .btn-outline-gold,
+    #about-final-cta .btn-gold, #about-final-cta .btn-outline-gold {
+      width: 280px !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      min-height: 52px !important;
+      padding-inline: 1rem !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      box-sizing: border-box !important;
+    }
+    .filter-pill-btn {
+      min-width: 240px !important;
+      min-height: 44px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+    }
+    @media (max-width: 767.98px) {
+      .hero-cta-group {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      .hero-cta-group .btn-gold, .hero-cta-group .btn-outline-gold,
+      .hero-cinematic .btn-gold, .hero-cinematic .btn-outline-gold,
+      .hero-editorial-left .btn-gold, .hero-editorial-left .btn-outline-gold,
+      #final-reservation-cta .btn-gold, #final-reservation-cta .btn-outline-gold,
+      #home2-final-cta .btn-gold, #home2-final-cta .btn-outline-gold,
+      #about-final-cta .btn-gold, #about-final-cta .btn-outline-gold,
+      #featured-event .btn-gold, #featured-event .btn-outline-gold,
+      #hospitality-experience .btn-gold, #hospitality-experience .btn-outline-gold,
+      .d-flex.flex-wrap > .btn-gold, .d-flex.flex-wrap > .btn-outline-gold {
+        width: 280px !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        min-height: 50px !important;
+        padding-inline: 1rem !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
+      #featured-event .btn-gold, #featured-event .btn-outline-gold {
+        width: 240px !important;
+      }
+      .hero-cinematic .hero-cta-group, .hero-editorial-left .hero-cta-group, #featured-event .hero-cta-group, #hospitality-experience .hero-cta-group {
+        align-items: flex-start !important;
+      }
+      .filter-pills {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      .filter-pill-btn {
+        width: 260px !important;
+        max-width: 100% !important;
+        min-width: 260px !important;
+        min-height: 44px !important;
+      }
+    }
+    /* Floating Back-to-Top Button */
+    .scroll-top-btn {
+      position: fixed;
+      inset-block-end: 1.75rem;
+      inset-inline-end: 1.75rem;
+      z-index: 1038;
+      width: 46px;
+      height: 46px;
+      border-radius: 2px;
+      background-color: #D6B878;
+      color: #0D0E11 !important;
+      border: 1.5px solid #D6B878;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease;
+    }
+    [data-theme="light"] .scroll-top-btn {
+      background-color: #15171C;
+      color: #D6B878 !important;
+      border: 1.5px solid #D6B878;
+    }
+    .brand-logo-icon, .auth-brand-badge .brand-logo-icon { width: 40px !important; height: 40px !important; min-width: 40px !important; min-height: 40px !important; flex-shrink: 0 !important; }
+
+    /* RTL Alignment Fixes */
+    [dir="rtl"] .text-end {
+      text-align: left !important;
+    }
+    [dir="rtl"] .text-start {
+      text-align: right !important;
+    }
+    @media (min-width: 992px) {
+      [dir="rtl"] .text-lg-end,
+      [dir="rtl"] #skyline-atmosphere .text-lg-end {
+        text-align: left !important;
+      }
+      [dir="rtl"] .text-lg-start {
+        text-align: right !important;
+      }
+    }
+    [dir="rtl"] .link-gold-underline i.bi-arrow-up-right,
+    [dir="rtl"] .link-gold-underline i.bi-arrow-right {
+      display: inline-block;
+      transform: scaleX(-1);
+    }
+
+    /* Footer Alignment (LTR & RTL) */
+    .site-footer .footer-links li {
+      display: flex !important;
+      align-items: flex-start !important;
+      color: var(--text-muted) !important;
+      font-size: 0.92rem !important;
+      line-height: 1.55 !important;
+    }
+    .site-footer .footer-links li > i {
+      flex-shrink: 0 !important;
+      margin-block-start: 0.22rem !important;
+      color: var(--champagne-gold) !important;
+      margin-inline-end: 0.75rem !important;
+      margin-inline-start: 0 !important;
+      font-size: 1rem !important;
+    }
+    .site-footer .footer-links li > span {
+      flex: 1 !important;
+      min-width: 0 !important;
+    }
+    [dir="rtl"] .site-footer .footer-links {
+      text-align: right !important;
+      padding-right: 0 !important;
+    }
+    [dir="rtl"] .site-footer .footer-links li {
+      text-align: right !important;
+      direction: rtl !important;
+    }
+    [dir="rtl"] .site-footer .footer-links li > i {
+      margin-inline-end: 0.75rem !important;
+      margin-inline-start: 0 !important;
+      margin-right: 0 !important;
+      margin-left: 0.75rem !important;
+    }
+    [dir="rtl"] .site-footer .footer-links li > span {
+      text-align: right !important;
+      direction: rtl !important;
+      unicode-bidi: plaintext !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,12 +348,13 @@
         <!-- LEFT: Brand Logo -->
         <a href="index.html" class="brand-logo" aria-label="ROOFTOP Restaurant & Lounge Bar Home">
           <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5"/>
-            <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5"/>
-            <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5"/>
-            <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5"/>
-            <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5"/>
-            <circle cx="46" cy="14" r="3" fill="#D6B878"/>
+            <rect x="3" y="3" width="58" height="58" rx="12" fill="#15171C" stroke="#D6B878" stroke-width="2"/>
+            <path d="M13 50V28C13 17.5066 21.5066 9 32 9C42.4934 9 51 17.5066 51 28V50" stroke="#D6B878" stroke-width="1.5" stroke-opacity="0.55"/>
+            <path d="M20 24H44L32 37L20 24Z" fill="#D6B878" fill-opacity="0.2" stroke="#D6B878" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M32 37V49" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M24 49H40" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="32" cy="17" r="2.5" fill="#D6B878"/>
+            <path d="M16 54H48" stroke="#D6B878" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
           </svg>
           <div class="brand-logo-text">
             <span class="brand-wordmark">ROOFTOP</span>
@@ -38,11 +365,11 @@
         <!-- CENTER: Navigation Links -->
         <ul class="nav-center">
           <li><a href="index.html" class="nav-link-rooftop active">Home</a></li>
+          <li><a href="about.html" class="nav-link-rooftop">About</a></li>
           <li><a href="home-2.html" class="nav-link-rooftop">Home 2</a></li>
           <li><a href="menu.html" class="nav-link-rooftop">Menu</a></li>
           <li><a href="events.html" class="nav-link-rooftop">Events</a></li>
           <li><a href="gallery.html" class="nav-link-rooftop">Gallery</a></li>
-          <li><a href="about.html" class="nav-link-rooftop">About</a></li>
           <li><a href="contact.html" class="nav-link-rooftop">Contact</a></li>
           <li><a href="dashboard.html" class="btn-gold btn-header-reserve">Dashboard</a></li>
         </ul>
@@ -69,21 +396,32 @@
   <aside class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Mobile Navigation">
     <div>
       <div class="d-flex justify-content-between align-items-center pb-3 border-bottom" style="border-color: var(--subtle-border) !important;">
-        <div class="brand-logo-text">
+        <a href="index.html" class="brand-logo">
+          <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="58" height="58" rx="12" fill="#15171C" stroke="#D6B878" stroke-width="2"/>
+            <path d="M13 50V28C13 17.5066 21.5066 9 32 9C42.4934 9 51 17.5066 51 28V50" stroke="#D6B878" stroke-width="1.5" stroke-opacity="0.55"/>
+            <path d="M20 24H44L32 37L20 24Z" fill="#D6B878" fill-opacity="0.2" stroke="#D6B878" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M32 37V49" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M24 49H40" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="32" cy="17" r="2.5" fill="#D6B878"/>
+            <path d="M16 54H48" stroke="#D6B878" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+          </svg>
+          <div class="brand-logo-text">
           <span class="brand-wordmark">ROOFTOP</span>
           <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
         </div>
+        </a>
         <button type="button" class="icon-btn" id="mobileMenuCloseBtn" aria-label="Close Navigation Menu">
           <i class="bi bi-x-lg"></i>
         </button>
       </div>
       <ul class="mobile-nav-list">
         <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="home-2.html">Home 2</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="login.html"><i class="bi bi-person-circle me-2" style="color:var(--champagne-gold);"></i>Guest Login</a></li>
@@ -108,7 +446,7 @@
          ====================================================================== -->
     <section class="hero-cinematic" id="hero">
       <img
-        src="assets/images/wtPnq4hpp196-91-ut2gGsjUrIR59aaTPUdro5xaFZ3MXxIk5LQGh-nlsi5wlh050Wnr9Nrscggp65hdz1TJe1DiX3b5wiIQX87fMlU9rZaU2TKBKEePkoJ7aIToUZP4BgTIUWT-Yyx5eG5lmF3L7rHzE1V9vT93IIAErS6wLcA.jpg"
+        src="assets/images/wtPnq4hpp196.jpg"
         alt="Luxury rooftop restaurant overlooking an illuminated metropolitan skyline at dusk"
         class="hero-bg-media"
       >
@@ -117,13 +455,13 @@
         <div class="row align-items-end g-5">
           <div class="col-lg-8 reveal-left">
             <span class="eyebrow-label">ROOFTOP RESTAURANT &amp; LOUNGE BAR</span>
-            <h1 class="display-hero text-white mb-4">
+            <h1 class="display-hero text-white mb-4" style="color: #FFFFFF !important; text-shadow: 0 3px 18px rgba(0, 0, 0, 0.9);">
               ABOVE THE CITY.<br><span class="shimmer-text">BEYOND THE ORDINARY.</span>
             </h1>
-            <p class="lead mb-4" style="color: var(--text-secondary); max-width: 640px; font-size: clamp(1.05rem, 1.4vw, 1.28rem);">
+            <p class="lead mb-4" style="max-width: 640px; font-size: clamp(1.05rem, 1.4vw, 1.28rem);">
               "Discover elevated dining, signature cocktails and unforgettable evenings with breathtaking skyline views."
             </p>
-            <div class="d-flex flex-wrap gap-3 pt-2">
+            <div class="d-flex flex-wrap gap-3 pt-2 hero-cta-group">
               <a href="dashboard.html#book-table" class="btn-gold glow-pulse">
                 RESERVE YOUR TABLE <i class="bi bi-arrow-up-right"></i>
               </a>
@@ -184,7 +522,7 @@
           <div class="col-lg-5 reveal-up">
             <article class="experience-showcase-card h-100">
               <div class="experience-img-wrap h-100">
-                <img src="assets/images/9_a25Sk84fpLwLm9EvDJhLbFu-DezkTgfqHV6uUKivLFZqjK034Hbjo_qLV6O387MBdL3p3_tE-PMVfAx8OQb3nfrAtUYyRsBMfPYI5VWofXwp_fUxAKQcLyDYmzSwnAg1P2krAx_73VXrEbLPAT2a9UuDPh-9XItAvQYSDtjpE.jpg" alt="Skyline Dining table arrangement overlooking city lights" loading="lazy">
+                <img src="assets/images/9_a25Sk84fpL.jpg" alt="Skyline Dining table arrangement overlooking city lights" loading="lazy">
                 <div class="experience-card-overlay">
                   <span class="badge-gold align-self-start mb-2">01 / HORIZON TABLES</span>
                   <h3 class="h2">Skyline Dining</h3>
@@ -197,7 +535,7 @@
           <div class="col-lg-7 d-flex flex-column justify-content-between gap-4">
             <article class="experience-showcase-card reveal-up">
               <div class="experience-img-wrap wide">
-                <img src="assets/images/NejsC5A0WkcsnYjfz9y_bR_0hlGP7YRjYlTJ5cOm1K8CUF32fPviTnkYiNdeVoB3-_y02E7-h_iMXrbxmy-Or44icJA4lONGrlk-Qx9pMnCtBjZMl-aWF82gcgjWLyEgSeLuau9N_trTWT4uYEbvQLSSgwztFoABZaf24xrCPZunor6I.jpg" alt="Premium Lounge bar counter and ambient lighting" loading="lazy">
+                <img src="assets/images/NejsC5A0Wkcs.jpg" alt="Premium Lounge bar counter and ambient lighting" loading="lazy">
                 <div class="experience-card-overlay">
                   <span class="badge-gold align-self-start mb-2">02 / CRAFT MIXOLOGY</span>
                   <h3 class="h2">Premium Lounge</h3>
@@ -208,7 +546,7 @@
 
             <article class="experience-showcase-card reveal-up">
               <div class="experience-img-wrap wide">
-                <img src="assets/images/cfUvCSHR5Fb2Or1LKAvCDDzyltut0Zhfg8geh1tCizTgwVKBopi_Md0ItBJ26IUKwHvDoWYpd8iAVdRe2AXHqfQm0DZ7EM0JECvTSy2y4yYiGLYIySm0nDxQrp7zRJnFkgR-ZE79uZbbl9aNwJGsJgjxraBXN_kaepW2aLsnnQA.jpg" alt="Sunset Evenings on the open-air rooftop terrace" loading="lazy">
+                <img src="assets/images/CXjp2a6ti1uM.jpg" alt="Sunset Evenings on the open-air rooftop terrace" loading="lazy">
                 <div class="experience-card-overlay">
                   <span class="badge-gold align-self-start mb-2">03 / GOLDEN HOUR TO DUSK</span>
                   <h3 class="h2">Sunset Evenings</h3>
@@ -248,7 +586,7 @@
           <!-- Item 1: Signature Starters -->
           <article class="menu-card" data-home-menu-item="Signature Starters">
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1592417817098-8f3d691a4bf5?auto=format&fit=crop&w=900&q=80" alt="Burrata Salad" loading="lazy">
+              <img src="assets/images/burrata-salad.jpg" alt="Artisanal Burrata Salad" loading="lazy">
               <div class="menu-card-badges">
                 <span class="badge-gold">Signature Starters</span>
               </div>
@@ -265,7 +603,7 @@
           <!-- Item 2: Gourmet Main Courses -->
           <article class="menu-card" data-home-menu-item="Gourmet Main Courses">
             <div class="menu-card-media">
-              <img src="assets/images/k-AcZ5I_xCdzUK6qS3OPQl_sP3-znJ6w_Fj4J7x6s0eTDowMpckTkI8AaFqw_2YKT61NVF0XNHWdyUKSHWJDs81dH5TLZIoFPrZWX9sZy4ZVBgHExHcyO-nIFj_JHgNbTenyzncS4XMivzRb54Z1jnn8Zo6J0s6vxsKbGS4OyTg.jpg" alt="Premium Grilled Steak" loading="lazy">
+              <img src="assets/images/k-AcZ5I_xCdz.jpg" alt="Premium Grilled Steak" loading="lazy">
               <div class="menu-card-badges">
                 <span class="badge-gold">Gourmet Main Courses</span>
               </div>
@@ -282,41 +620,41 @@
           <!-- Item 3: Chef's Specialities -->
           <article class="menu-card" data-home-menu-item="Chef's Specialities">
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80" alt="Grilled Norwegian Salmon" loading="lazy">
+              <img src="assets/images/crispy-calamari.jpg" alt="Crispy Calamari with Charred Lemon" loading="lazy">
               <div class="menu-card-badges">
                 <span class="badge-gold">Chef's Specialities</span>
               </div>
             </div>
             <div class="menu-card-body">
               <div class="menu-card-header">
-                <h3 class="menu-card-title">Pan-Seared Norwegian Salmon</h3>
-                <span class="menu-card-price">₹1,850</span>
+                <h3 class="menu-card-title">Crispy Calamari</h3>
+                <span class="menu-card-price">₹890</span>
               </div>
-              <p class="mb-0 small">Crisp-skin Atlantic salmon fillet with saffron beurre blanc, charred baby asparagus and citrus herb oil.</p>
+              <p class="mb-0 small">Lightly dusted tender squid rings served with charred lemon, smoked paprika aioli and micro-herb garnish.</p>
             </div>
           </article>
 
           <!-- Item 4: Chef's Specialities -->
           <article class="menu-card" data-home-menu-item="Chef's Specialities">
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Rooftop Signature Platter" loading="lazy">
+              <img src="assets/images/truffle-fries.jpg" alt="Artisanal Truffle Parmesan Fries" loading="lazy">
               <div class="menu-card-badges">
                 <span class="badge-gold">Chef's Specialities</span>
               </div>
             </div>
             <div class="menu-card-body">
               <div class="menu-card-header">
-                <h3 class="menu-card-title">Rooftop Signature Platter</h3>
-                <span class="menu-card-price">₹2,450</span>
+                <h3 class="menu-card-title">Truffle Parmesan Fries</h3>
+                <span class="menu-card-price">₹680</span>
               </div>
-              <p class="mb-0 small">Chef's tasting board featuring chargrilled tiger prawns, herb medallions, artisanal cheeses and truffle dips.</p>
+              <p class="mb-0 small">Hand-cut crispy artisanal potatoes tossed in white truffle oil, 24-month aged Parmigiano-Reggiano and fresh rosemary.</p>
             </div>
           </article>
 
           <!-- Item 5: Signature Cocktails -->
           <article class="menu-card" data-home-menu-item="Signature Cocktails">
             <div class="menu-card-media">
-              <img src="assets/images/yUOzSeD2BsRGD1266R32esVtZPlnvBnt3LszlGcc9srn8Eap5vTVLKJVOqeCIGBq5fZ3usxZorpCKE5yrRONmllMTlYXHGeLTJS6XPxcAbXqd_CuVLhXunZpQCw0g7CFpuCvVroPMqqEXfRy3UUCLVmTEjBdRPVkILim1OlGftU.jpg" alt="Golden Hour Martini" loading="lazy">
+              <img src="assets/images/yUOzSeD2BsRG.jpg" alt="Golden Hour Martini" loading="lazy">
               <div class="menu-card-badges">
                 <span class="badge-gold">Signature Cocktails</span>
               </div>
@@ -330,20 +668,20 @@
             </div>
           </article>
 
-          <!-- Item 6: Fine Desserts -->
-          <article class="menu-card" data-home-menu-item="Fine Desserts">
+          <!-- Item 6: Signature Cocktails -->
+          <article class="menu-card" data-home-menu-item="Signature Cocktails">
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80" alt="Valrhona Chocolate Fondant" loading="lazy">
+              <img src="assets/images/huZ5234stz9n.jpg" alt="Smoked Rooftop Old Fashioned" loading="lazy">
               <div class="menu-card-badges">
-                <span class="badge-gold">Fine Desserts</span>
+                <span class="badge-gold">Signature Cocktails</span>
               </div>
             </div>
             <div class="menu-card-body">
               <div class="menu-card-header">
-                <h3 class="menu-card-title">Valrhona Chocolate Fondant</h3>
-                <span class="menu-card-price">₹780</span>
+                <h3 class="menu-card-title">Smoked Rooftop Old Fashioned</h3>
+                <span class="menu-card-price">₹1,150</span>
               </div>
-              <p class="mb-0 small">Warm dark chocolate molten center cake served with Madagascar vanilla bean gelato and gold-dusted tuile.</p>
+              <p class="mb-0 small">Small-batch bourbon, demerara reduction and aromatic bitters, cold-smoked tableside under a glass cloche with cherrywood.</p>
             </div>
           </article>
         </div>
@@ -374,7 +712,7 @@
         <div class="skyline-time-grid reveal-up">
           <!-- Golden Hour -->
           <div class="skyline-slot span-7">
-            <img src="assets/images/cfUvCSHR5Fb2Or1LKAvCDDzyltut0Zhfg8geh1tCizTgwVKBopi_Md0ItBJ26IUKwHvDoWYpd8iAVdRe2AXHqfQm0DZ7EM0JECvTSy2y4yYiGLYIySm0nDxQrp7zRJnFkgR-ZE79uZbbl9aNwJGsJgjxraBXN_kaepW2aLsnnQA.jpg" alt="Golden Hour rooftop terrace glow" loading="lazy">
+            <img src="assets/images/cfUvCSHR5Fb2.jpg" alt="Golden Hour rooftop terrace glow" loading="lazy">
             <div class="skyline-caption">
               <span class="badge-gold align-self-start mb-2">5:30 PM – 6:30 PM</span>
               <h3 class="h3 text-white mb-1">Golden Hour</h3>
@@ -384,7 +722,7 @@
 
           <!-- Sunset -->
           <div class="skyline-slot span-5">
-            <img src="assets/images/pUze8Xur_eIoprbmpwhJGu_3Tl0BeHYCyN9rIl5CagB1LhcPcaKsM5thmMiY3tO_UBvTVUYOUsc_-MN8tLmpJzRj-wYoBSYh-3iUyU2y0Oz9Az6dljd3wR7Hknr3t1JXvMH3QlVoIK0nRMG9e8eoPNJ6AUaDyo3eDWtCBBbWLpQ.jpg" alt="Crimson Sunset horizon from rooftop" loading="lazy">
+            <img src="assets/images/pUze8Xur_eIo.jpg" alt="Crimson Sunset horizon from rooftop" loading="lazy">
             <div class="skyline-caption">
               <span class="badge-gold align-self-start mb-2">6:30 PM – 7:15 PM</span>
               <h3 class="h3 text-white mb-1">Sunset</h3>
@@ -394,7 +732,7 @@
 
           <!-- Blue Hour -->
           <div class="skyline-slot span-5">
-            <img src="assets/images/0LTb-WTREsjRSOHEOMyrggHppQUwjyIWcSTL70g_yfp6JXqwMMPpysvYrDSmUCuh1XWu3reJ1O5-1rHXuNfjXCk1OeGma-LEvILUbqRypuSqwYV0lNZebDV8yTDGE5ejCdoCOxoLKWf_srsMzIiU0FaElUl77eFP91n0k8lXTGc.jpg" alt="Twilight Blue Hour city lights awakening" loading="lazy">
+            <img src="assets/images/eG7CpLAfXSvX.jpg" alt="Twilight Blue Hour city lights awakening" loading="lazy">
             <div class="skyline-caption">
               <span class="badge-gold align-self-start mb-2">7:15 PM – 8:00 PM</span>
               <h3 class="h3 text-white mb-1">Blue Hour</h3>
@@ -404,7 +742,7 @@
 
           <!-- Night -->
           <div class="skyline-slot span-7">
-            <img src="assets/images/wtPnq4hpp196-91-ut2gGsjUrIR59aaTPUdro5xaFZ3MXxIk5LQGh-nlsi5wlh050Wnr9Nrscggp65hdz1TJe1DiX3b5wiIQX87fMlU9rZaU2TKBKEePkoJ7aIToUZP4BgTIUWT-Yyx5eG5lmF3L7rHzE1V9vT93IIAErS6wLcA.jpg" alt="Nighttime rooftop dining and lounge atmosphere" loading="lazy">
+            <img src="assets/images/CslP5rRvnt--.jpg" alt="Nighttime rooftop dining and lounge atmosphere" loading="lazy">
             <div class="skyline-caption">
               <span class="badge-gold align-self-start mb-2">8:00 PM – LATE</span>
               <h3 class="h3 text-white mb-1">Night</h3>
@@ -434,7 +772,7 @@
           <div class="col-md-6 col-xl-3">
             <article class="event-poster-card h-100">
               <div class="event-poster-img">
-                <img src="assets/images/RZ25x8DjtcADh5QeWhENluw_3zAQIJsvYILDdgLY4gjlPlcpRKzR-3qlLYIrw_CWIY6112WpiWZ5favVmMtxrxRNDkXIIvAlyzOQzKfME3UT9uWGK8klU5ARIhL5zAVGY34cHg0UyWYvUqCOKKDFb7xJeGziblY8MyaEIZ-Z2_bdwbm5.jpg" alt="Live Jazz Evenings performance" loading="lazy">
+                <img src="assets/images/RZ25x8DjtcAD.jpg" alt="Live Jazz Evenings performance" loading="lazy">
                 <div class="position-absolute top-0 start-0 m-3">
                   <span class="badge-demo">DEMO EVENT</span>
                 </div>
@@ -454,7 +792,7 @@
           <div class="col-md-6 col-xl-3">
             <article class="event-poster-card h-100">
               <div class="event-poster-img">
-                <img src="assets/images/Ss9y01lCzCKlU2tG9QD8VU_5Nbd1OxO7rnibxMKAlrEor2Xle9_8ckORHi_V89_v89watF-MB9LI-yoC6hLrpuusu8jcaQfatitkA9mZeGG1TBloT8HvPKCrUGyAyIrYOPb9OeexGq-NCEzTaDOQrjuEhNJD5_70bEaTjcvP8kc.jpg" alt="DJ Lounge Nights" loading="lazy">
+                <img src="assets/images/Ss9y01lCzCKl.jpg" alt="DJ Lounge Nights" loading="lazy">
                 <div class="position-absolute top-0 start-0 m-3">
                   <span class="badge-demo">DEMO EVENT</span>
                 </div>
@@ -474,7 +812,7 @@
           <div class="col-md-6 col-xl-3">
             <article class="event-poster-card h-100">
               <div class="event-poster-img">
-                <img src="assets/images/AUyNX-TjOq1BqzDUzvah1E7KIeIhG6IjVkAUdhYrZEr01qk2gxDLTxHIPj4Ua7T-U9cXLfGBArXraKLPz7oAKkQwOZSutDGQjb1P8d-U4qmP2gDIPHJt0fRNCSj9vZS3vwkQBYwLThayfHtk30zPPCZl2NKXSGMuTdXdSsvWny8.jpg" alt="Acoustic Sessions" loading="lazy">
+                <img src="assets/images/AUyNX-TjOq1B.jpg" alt="Acoustic Sessions" loading="lazy">
                 <div class="position-absolute top-0 start-0 m-3">
                   <span class="badge-demo">DEMO EVENT</span>
                 </div>
@@ -494,7 +832,7 @@
           <div class="col-md-6 col-xl-3">
             <article class="event-poster-card h-100">
               <div class="event-poster-img">
-                <img src="assets/images/drNFxgCDI8BfXhM_YaRIJbuZDghXmxLAVrBPlcLUXvKmLEz_NIKwx92BDuFWVrZJpiNPeYammyOv4wCvu9q78PMFrR4VP-8stzR2_gpN_dO1rPoej7tTzuq7Kymc4Jkw7H6GQIdulJNvw0mSBXrnZIr2yhLmU3QiMtK9-43Due40_Zeq.jpg" alt="Special Celebration Nights" loading="lazy">
+                <img src="assets/images/drNFxgCDI8Bf.jpg" alt="Special Celebration Nights" loading="lazy">
                 <div class="position-absolute top-0 start-0 m-3">
                   <span class="badge-demo">DEMO EVENT</span>
                 </div>
@@ -528,7 +866,7 @@
           <div class="col-lg-6 reveal-up">
             <div class="position-relative">
               <img
-                src="assets/images/XhTFMLQC79Yq2zNbms0_y9ckcJxVg3eb_kLREhKRYr3ns_1dxnINSsfGCPXaQQ-L0gMixp-IWzegKZLuln6l9Du5JyL2FNbsKLWbpY86sBn8f-nypawrjg2faDNPrr4GIt3RgA64wLcT6PJMfuplVsZARHdAwslPgjR3DmriUyuShBLh.jpg"
+                src="assets/images/XhTFMLQC79Yq.jpg"
                 alt="Romantic rooftop dinner and private celebration setup"
                 class="w-100"
                 style="border: 1px solid var(--subtle-border); aspect-ratio: 4/5; object-fit: cover;"
@@ -599,7 +937,7 @@
          ====================================================================== -->
     <section class="section-padding position-relative overflow-hidden surface-deep-black" id="final-reservation-cta">
       <img
-        src="assets/images/0LTb-WTREsjRSOHEOMyrggHppQUwjyIWcSTL70g_yfp6JXqwMMPpysvYrDSmUCuh1XWu3reJ1O5-1rHXuNfjXCk1OeGma-LEvILUbqRypuSqwYV0lNZebDV8yTDGE5ejCdoCOxoLKWf_srsMzIiU0FaElUl77eFP91n0k8lXTGc.jpg"
+        src="assets/images/0LTb-WTREsjR.jpg"
         alt="Nighttime rooftop terrace illuminated above the city"
         class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover cta-bg-media"
         loading="lazy"
@@ -610,10 +948,10 @@
         <h2 class="display-hero text-white mb-3" style="font-size: clamp(2.2rem, 4.5vw, 4rem);">
           YOUR TABLE ABOVE THE CITY AWAITS.
         </h2>
-        <p class="lead mx-auto mb-4" style="color: var(--text-secondary); max-width: 650px;">
+        <p class="lead mx-auto mb-4" style="max-width: 650px;">
           "Make your next evening extraordinary. Reserve your place and experience the rooftop."
         </p>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
+        <div class="d-flex flex-wrap justify-content-center gap-3 hero-cta-group">
           <a href="dashboard.html#book-table" class="btn-gold">
             RESERVE YOUR TABLE <i class="bi bi-calendar2-check"></i>
           </a>
@@ -635,13 +973,14 @@
         <div class="col-lg-4">
           <a href="index.html" class="brand-logo mb-3">
             <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5"/>
-              <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5"/>
-              <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5"/>
-              <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5"/>
-              <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5"/>
-              <circle cx="46" cy="14" r="3" fill="#D6B878"/>
-            </svg>
+            <rect x="3" y="3" width="58" height="58" rx="12" fill="#15171C" stroke="#D6B878" stroke-width="2"/>
+            <path d="M13 50V28C13 17.5066 21.5066 9 32 9C42.4934 9 51 17.5066 51 28V50" stroke="#D6B878" stroke-width="1.5" stroke-opacity="0.55"/>
+            <path d="M20 24H44L32 37L20 24Z" fill="#D6B878" fill-opacity="0.2" stroke="#D6B878" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M32 37V49" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M24 49H40" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="32" cy="17" r="2.5" fill="#D6B878"/>
+            <path d="M16 54H48" stroke="#D6B878" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+          </svg>
             <div class="brand-logo-text">
               <span class="brand-wordmark">ROOFTOP</span>
               <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
@@ -665,17 +1004,17 @@
           <h3 class="footer-heading">Navigation</h3>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="home-2.html">Home 2</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
         <!-- Col 3: Experience -->
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-2">
           <h3 class="footer-heading">Experience</h3>
           <ul class="footer-links">
             <li><a href="menu.html">Rooftop Dining</a></li>
@@ -687,19 +1026,19 @@
         </div>
 
         <!-- Col 4: Contact Placeholders -->
-        <div class="col-md-4 col-lg-3">
+        <div class="col-md-4 col-lg-4">
           <h3 class="footer-heading">Contact (Demo Placeholders)</h3>
           <ul class="footer-links">
             <li>
-              <i class="bi bi-geo-alt me-2" style="color:var(--champagne-gold);"></i>
+              <i class="bi bi-geo-alt" style="color:var(--champagne-gold);"></i>
               <span>[Editable Address Placeholder: Sky-Deck Level, Metropolitan Tower]</span>
             </li>
             <li>
-              <i class="bi bi-telephone me-2" style="color:var(--champagne-gold);"></i>
+              <i class="bi bi-telephone" style="color:var(--champagne-gold);"></i>
               <span>[Editable Phone Placeholder: +91 00000 00000]</span>
             </li>
             <li>
-              <i class="bi bi-envelope me-2" style="color:var(--champagne-gold);"></i>
+              <i class="bi bi-envelope" style="color:var(--champagne-gold);"></i>
               <span>[Editable Email Placeholder: reservations@rooftop-demo.com]</span>
             </li>
           </ul>
@@ -715,6 +1054,8 @@
 
   <!-- Bootstrap 5 JS Bundle & Main Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=6"></script>
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top" title="Back to Top"><i class="bi bi-arrow-up"></i></button>
 </body>
 </html>

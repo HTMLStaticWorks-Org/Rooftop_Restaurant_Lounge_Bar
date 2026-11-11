@@ -5,11 +5,316 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ROOFTOP — Contact &amp; Concierge | Let's Make Your Next Evening Special</title>
+  <!-- Favicon matching brand logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <meta name="description"
     content="Connect with ROOFTOP Restaurant & Lounge Bar for table reservations, private celebrations, event enquiries and guest assistance.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
+  <style id="rooftop-critical-fixes">
+        /* Remove white shade on all images & overlays in Light Mode + High-Contrast Hero Headings */
+    .hero-overlay,
+    [data-theme="light"] .hero-overlay,
+    .page-hero .hero-overlay,
+    [data-theme="light"] .page-hero .hero-overlay {
+      background: linear-gradient(180deg, rgba(13, 14, 17, 0.72) 0%, rgba(13, 14, 17, 0.62) 50%, rgba(13, 14, 17, 0.85) 100%) !important;
+    }
+    .hero-bg-media, .page-hero .hero-bg-media, [data-theme="light"] .page-hero .hero-bg-media,
+    .cta-bg-media, [data-theme="light"] .cta-bg-media {
+      opacity: 1 !important;
+    }
+    .page-hero, #final-reservation-cta {
+      background-color: #0D0E11 !important;
+    }
+    .hero-cinematic h1, .hero-cinematic .display-hero, .hero-cinematic .text-white,
+    .page-hero h1, .page-hero .display-hero, .page-hero .text-white,
+    #final-reservation-cta h2, #final-reservation-cta .text-white,
+    [data-theme="light"] .hero-cinematic h1, [data-theme="light"] .hero-cinematic .display-hero, [data-theme="light"] .hero-cinematic .text-white,
+    [data-theme="light"] .page-hero h1, [data-theme="light"] .page-hero .display-hero, [data-theme="light"] .page-hero .text-white,
+    [data-theme="light"] #final-reservation-cta h2, [data-theme="light"] #final-reservation-cta .text-white {
+      color: #FFFFFF !important;
+      text-shadow: 0 3px 18px rgba(0, 0, 0, 0.9) !important;
+    }
+    .hero-cinematic .shimmer-text, [data-theme="light"] .hero-cinematic .shimmer-text {
+      background: linear-gradient(90deg, #FFFFFF 0%, #F5DC9B 50%, #FFFFFF 100%) !important;
+      background-size: 200% auto !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.85));
+    }
+    .hero-cinematic .eyebrow-label, .page-hero .eyebrow-label, #final-reservation-cta .eyebrow-label,
+    [data-theme="light"] .hero-cinematic .eyebrow-label, [data-theme="light"] .page-hero .eyebrow-label, [data-theme="light"] #final-reservation-cta .eyebrow-label {
+      color: #F5DC9B !important;
+      font-weight: 700 !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+    }
+    .hero-cinematic .eyebrow-label::before, .page-hero .eyebrow-label::before, #final-reservation-cta .eyebrow-label::before,
+    [data-theme="light"] .hero-cinematic .eyebrow-label::before, [data-theme="light"] .page-hero .eyebrow-label::before, [data-theme="light"] #final-reservation-cta .eyebrow-label::before {
+      background-color: #F5DC9B !important;
+    }
+    .hero-cinematic .lead, .page-hero .lead, #final-reservation-cta .lead,
+    [data-theme="light"] .hero-cinematic .lead, [data-theme="light"] .page-hero .lead, [data-theme="light"] #final-reservation-cta .lead {
+      color: #FFFFFF !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+    }
+    .hero-editorial-left h1, .hero-editorial-left .display-hero {
+      color: #FFFFFF !important;
+    }
+    [data-theme="light"] .hero-editorial-left h1, [data-theme="light"] .hero-editorial-left .display-hero {
+      color: #0D0E11 !important;
+      font-weight: 700 !important;
+    }
+    [data-theme="light"] .hero-editorial-left .eyebrow-label {
+      color: #5C410D !important;
+      font-weight: 700 !important;
+    }
+    [data-theme="light"] .hero-editorial-left .lead {
+      color: #1E1D1B !important;
+      font-weight: 500 !important;
+    }
+    .experience-card-overlay, [data-theme="light"] .experience-card-overlay {
+      background: linear-gradient(180deg, rgba(13,14,17,0) 40%, rgba(13,14,17,0.88) 100%) !important;
+    }
+    [data-theme="light"] .experience-card-overlay h2, [data-theme="light"] .experience-card-overlay h3,
+    [data-theme="light"] .skyline-caption h3, [data-theme="light"] .skyline-caption h4, [data-theme="light"] .skyline-caption .text-white,
+    [data-theme="light"] .nightlife-poster-overlay h3, [data-theme="light"] .nightlife-poster-overlay .h4, [data-theme="light"] .nightlife-poster-overlay .text-white,
+    [data-theme="light"] .gallery-hover-info h3, [data-theme="light"] .gallery-hover-info .h4, [data-theme="light"] .gallery-hover-info .text-white,
+    [data-theme="light"] .theme-overlay-box h2, [data-theme="light"] .theme-overlay-box .text-white,
+    [data-theme="light"] .editorial-floating-card h2, [data-theme="light"] .editorial-floating-card .text-white {
+      color: #FFFFFF !important;
+    }
+    [data-theme="light"] .experience-card-overlay p, [data-theme="light"] .skyline-caption p, [data-theme="light"] .skyline-caption .small,
+    [data-theme="light"] .nightlife-poster-overlay p, [data-theme="light"] .nightlife-poster-overlay .small,
+    [data-theme="light"] .theme-overlay-box p, [data-theme="light"] .editorial-floating-card p {
+      color: rgba(244, 239, 230, 0.92) !important;
+    }
+    .skyline-caption, [data-theme="light"] .skyline-caption {
+      background: linear-gradient(180deg, transparent 45%, rgba(13, 14, 17, 0.88) 100%) !important;
+    }
+    .nightlife-poster-overlay, [data-theme="light"] .nightlife-poster-overlay {
+      background: linear-gradient(180deg, rgba(13, 14, 17, 0.72) 0%, rgba(13, 14, 17, 0.28) 38%, rgba(13, 14, 17, 0.94) 100%) !important;
+    }
+    .nightlife-poster-overlay h3, [data-theme="light"] .nightlife-poster-overlay h3,
+    [data-theme="light"] .nightlife-poster-overlay .text-white {
+      color: #FFFFFF !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85) !important;
+    }
+    .nightlife-poster-overlay p, [data-theme="light"] .nightlife-poster-overlay p,
+    .nightlife-poster-overlay p.small, [data-theme="light"] .nightlife-poster-overlay p.small {
+      color: #FFFFFF !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.85) !important;
+    }
+    .nightlife-poster-overlay .link-gold-underline,
+    [data-theme="light"] .nightlife-poster-overlay .link-gold-underline {
+      color: #F5DC9B !important;
+      border-bottom-color: #F5DC9B !important;
+      font-weight: 700 !important;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85) !important;
+    }
+    .nightlife-day-tag, [data-theme="light"] .nightlife-day-tag {
+      background-color: rgba(13, 14, 17, 0.9) !important;
+      color: #FFFFFF !important;
+      border: 1px solid rgba(214, 184, 120, 0.75) !important;
+      padding: 0.3rem 0.65rem !important;
+      font-size: 0.68rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.15em !important;
+      border-radius: 2px !important;
+    }
+    [data-theme="light"] #nightlife-collection .eyebrow-label {
+      color: #5C410D !important;
+      font-weight: 700 !important;
+    }
+    .gallery-hover-info, [data-theme="light"] .gallery-hover-info {
+      background: linear-gradient(180deg, rgba(13, 14, 17, 0.12) 0%, rgba(13, 14, 17, 0.45) 45%, rgba(13, 14, 17, 0.92) 100%) !important;
+    }
+    .gallery-item img, .gallery-item:hover img,
+    .event-poster-img img, .event-poster-card:hover .event-poster-img img {
+      filter: none !important;
+      opacity: 1 !important;
+    }
+    .theme-overlay-box, [data-theme="light"] .theme-overlay-box,
+    .editorial-floating-card, [data-theme="light"] .editorial-floating-card {
+      background: rgba(13, 14, 17, 0.86) !important;
+      color: #FFFFFF !important;
+    }
+    /* High-contrast badges on cards & images */
+    .menu-card-badges .badge-gold, [data-theme="light"] .menu-card-badges .badge-gold,
+    [data-theme="light"] .hero-cinematic .badge-gold, [data-theme="light"] .experience-card-overlay .badge-gold,
+    [data-theme="light"] .skyline-caption .badge-gold, [data-theme="light"] .nightlife-poster-overlay .badge-gold,
+    [data-theme="light"] .gallery-hover-info .badge-gold, [data-theme="light"] .theme-overlay-box .badge-gold,
+    [data-theme="light"] .editorial-floating-card .badge-gold {
+      background-color: rgba(13, 14, 17, 0.94) !important;
+      color: #FFFFFF !important;
+      border: 1.5px solid #D6B878 !important;
+      font-weight: 700 !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
+    }
+    .menu-card-badges .veg-indicator, [data-theme="light"] .menu-card-badges .veg-indicator {
+      background-color: rgba(13, 14, 17, 0.94) !important;
+      color: #5CE6A0 !important;
+      border: 1.5px solid #35A66E !important;
+      font-weight: 700 !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
+    }
+    /* High-contrast buttons & uniform button sizes across Hero, Home 2 Hero, Filter Pills & CTAs */
+    [data-theme="light"] .btn-outline-gold {
+      color: #15171C !important;
+      border-color: #846422 !important;
+      font-weight: 700 !important;
+    }
+    [data-theme="light"] .btn-outline-gold:hover {
+      background-color: var(--champagne-gold) !important;
+      color: #FFFFFF !important;
+    }
+    .hero-cinematic .btn-outline-gold, #final-reservation-cta .btn-outline-gold,
+    [data-theme="light"] .hero-cinematic .btn-outline-gold, [data-theme="light"] #final-reservation-cta .btn-outline-gold {
+      background-color: rgba(13, 14, 17, 0.78) !important;
+      color: #FFFFFF !important;
+      border: 1.5px solid #D6B878 !important;
+      font-weight: 700 !important;
+    }
+    .hero-cta-group .btn-gold, .hero-cta-group .btn-outline-gold,
+    .hero-cinematic .btn-gold, .hero-cinematic .btn-outline-gold,
+    .hero-editorial-left .btn-gold, .hero-editorial-left .btn-outline-gold,
+    #final-reservation-cta .btn-gold, #final-reservation-cta .btn-outline-gold,
+    #home2-final-cta .btn-gold, #home2-final-cta .btn-outline-gold,
+    #featured-event .btn-gold, #featured-event .btn-outline-gold,
+    #hospitality-experience .btn-gold, #hospitality-experience .btn-outline-gold,
+    #about-final-cta .btn-gold, #about-final-cta .btn-outline-gold {
+      width: 280px !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      min-height: 52px !important;
+      padding-inline: 1rem !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      box-sizing: border-box !important;
+    }
+    .filter-pill-btn {
+      min-width: 240px !important;
+      min-height: 44px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+    }
+    @media (max-width: 767.98px) {
+      .hero-cta-group {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      .hero-cta-group .btn-gold, .hero-cta-group .btn-outline-gold,
+      .hero-cinematic .btn-gold, .hero-cinematic .btn-outline-gold,
+      .hero-editorial-left .btn-gold, .hero-editorial-left .btn-outline-gold,
+      #final-reservation-cta .btn-gold, #final-reservation-cta .btn-outline-gold,
+      #home2-final-cta .btn-gold, #home2-final-cta .btn-outline-gold,
+      #about-final-cta .btn-gold, #about-final-cta .btn-outline-gold,
+      #featured-event .btn-gold, #featured-event .btn-outline-gold,
+      #hospitality-experience .btn-gold, #hospitality-experience .btn-outline-gold,
+      .d-flex.flex-wrap > .btn-gold, .d-flex.flex-wrap > .btn-outline-gold {
+        width: 280px !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        min-height: 50px !important;
+        padding-inline: 1rem !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
+      #featured-event .btn-gold, #featured-event .btn-outline-gold {
+        width: 240px !important;
+      }
+      .hero-cinematic .hero-cta-group, .hero-editorial-left .hero-cta-group, #featured-event .hero-cta-group, #hospitality-experience .hero-cta-group {
+        align-items: flex-start !important;
+      }
+      .filter-pills {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      .filter-pill-btn {
+        width: 260px !important;
+        max-width: 100% !important;
+        min-width: 260px !important;
+        min-height: 44px !important;
+      }
+    }
+    /* Floating Back-to-Top Button */
+    .scroll-top-btn {
+      position: fixed;
+      inset-block-end: 1.75rem;
+      inset-inline-end: 1.75rem;
+      z-index: 1038;
+      width: 46px;
+      height: 46px;
+      border-radius: 2px;
+      background-color: #D6B878;
+      color: #0D0E11 !important;
+      border: 1.5px solid #D6B878;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease;
+    }
+    [data-theme="light"] .scroll-top-btn {
+      background-color: #15171C;
+      color: #D6B878 !important;
+      border: 1.5px solid #D6B878;
+    }
+    .brand-logo-icon, .auth-brand-badge .brand-logo-icon { width: 40px !important; height: 40px !important; min-width: 40px !important; min-height: 40px !important; flex-shrink: 0 !important; }
+      .contact-form-card { height: auto !important; }
+
+    /* Footer Alignment (LTR & RTL) */
+    .site-footer .footer-links li {
+      display: flex !important;
+      align-items: flex-start !important;
+      color: var(--text-muted) !important;
+      font-size: 0.92rem !important;
+      line-height: 1.55 !important;
+    }
+    .site-footer .footer-links li > i {
+      flex-shrink: 0 !important;
+      margin-block-start: 0.22rem !important;
+      color: var(--champagne-gold) !important;
+      margin-inline-end: 0.75rem !important;
+      margin-inline-start: 0 !important;
+      font-size: 1rem !important;
+    }
+    .site-footer .footer-links li > span {
+      flex: 1 !important;
+      min-width: 0 !important;
+    }
+    [dir="rtl"] .site-footer .footer-links {
+      text-align: right !important;
+      padding-right: 0 !important;
+    }
+    [dir="rtl"] .site-footer .footer-links li {
+      text-align: right !important;
+      direction: rtl !important;
+    }
+    [dir="rtl"] .site-footer .footer-links li > i {
+      margin-inline-end: 0.75rem !important;
+      margin-inline-start: 0 !important;
+      margin-right: 0 !important;
+      margin-left: 0.75rem !important;
+    }
+    [dir="rtl"] .site-footer .footer-links li > span {
+      text-align: right !important;
+      direction: rtl !important;
+      unicode-bidi: plaintext !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -22,12 +327,13 @@
       <nav class="navbar-rooftop" aria-label="Primary Navigation">
         <a href="index.html" class="brand-logo" aria-label="ROOFTOP Restaurant & Lounge Bar Home">
           <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5" />
-            <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5" />
-            <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5" />
-            <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5" />
-            <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5" />
-            <circle cx="46" cy="14" r="3" fill="#D6B878" />
+            <rect x="3" y="3" width="58" height="58" rx="12" fill="#15171C" stroke="#D6B878" stroke-width="2"/>
+            <path d="M13 50V28C13 17.5066 21.5066 9 32 9C42.4934 9 51 17.5066 51 28V50" stroke="#D6B878" stroke-width="1.5" stroke-opacity="0.55"/>
+            <path d="M20 24H44L32 37L20 24Z" fill="#D6B878" fill-opacity="0.2" stroke="#D6B878" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M32 37V49" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M24 49H40" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="32" cy="17" r="2.5" fill="#D6B878"/>
+            <path d="M16 54H48" stroke="#D6B878" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
           </svg>
           <div class="brand-logo-text">
             <span class="brand-wordmark">ROOFTOP</span>
@@ -37,11 +343,11 @@
 
         <ul class="nav-center">
           <li><a href="index.html" class="nav-link-rooftop">Home</a></li>
+          <li><a href="about.html" class="nav-link-rooftop">About</a></li>
           <li><a href="home-2.html" class="nav-link-rooftop">Home 2</a></li>
           <li><a href="menu.html" class="nav-link-rooftop">Menu</a></li>
           <li><a href="events.html" class="nav-link-rooftop">Events</a></li>
           <li><a href="gallery.html" class="nav-link-rooftop">Gallery</a></li>
-          <li><a href="about.html" class="nav-link-rooftop">About</a></li>
           <li><a href="contact.html" class="nav-link-rooftop active">Contact</a></li>
           <li><a href="dashboard.html" class="btn-gold btn-header-reserve">Dashboard</a></li>
         </ul>
@@ -68,21 +374,32 @@
     <div>
       <div class="d-flex justify-content-between align-items-center pb-3 border-bottom"
         style="border-color: var(--subtle-border) !important;">
-        <div class="brand-logo-text">
+        <a href="index.html" class="brand-logo">
+          <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="58" height="58" rx="12" fill="#15171C" stroke="#D6B878" stroke-width="2"/>
+            <path d="M13 50V28C13 17.5066 21.5066 9 32 9C42.4934 9 51 17.5066 51 28V50" stroke="#D6B878" stroke-width="1.5" stroke-opacity="0.55"/>
+            <path d="M20 24H44L32 37L20 24Z" fill="#D6B878" fill-opacity="0.2" stroke="#D6B878" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M32 37V49" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M24 49H40" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="32" cy="17" r="2.5" fill="#D6B878"/>
+            <path d="M16 54H48" stroke="#D6B878" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+          </svg>
+          <div class="brand-logo-text">
           <span class="brand-wordmark">ROOFTOP</span>
           <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
         </div>
+        </a>
         <button type="button" class="icon-btn" id="mobileMenuCloseBtn" aria-label="Close Navigation Menu">
           <i class="bi bi-x-lg"></i>
         </button>
       </div>
       <ul class="mobile-nav-list">
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="home-2.html">Home 2</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
         <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="login.html"><i class="bi bi-person-circle me-2" style="color:var(--champagne-gold);"></i>Guest
@@ -107,12 +424,12 @@
          CONTACT HERO SECTION
          ====================================================================== -->
     <section class="page-hero">
-      <img src="assets/images/NejsC5A0WkcsnYjfz9y_bR_0hlGP7YRjYlTJ5cOm1K8CUF32fPviTnkYiNdeVoB3-_y02E7-h_iMXrbxmy-Or44icJA4lONGrlk-Qx9pMnCtBjZMl-aWF82gcgjWLyEgSeLuau9N_trTWT4uYEbvQLSSgwztFoABZaf24xrCPZunor6I.jpg"
+      <img src="assets/images/NejsC5A0Wkcs.jpg"
         alt="Nighttime rooftop lounge terrace" class="hero-bg-media">
       <div class="hero-overlay"></div>
       <div class="container-luxury page-hero-content">
         <span class="eyebrow-label">CONCIERGE &amp; ENQUIRIES</span>
-        <h1 class="display-hero text-white mb-3">
+        <h1 class="display-hero text-white mb-3" style="color: #FFFFFF !important; text-shadow: 0 3px 18px rgba(0, 0, 0, 0.9);">
           LET'S MAKE YOUR NEXT EVENING SPECIAL.
         </h1>
         <p class="lead mb-0" style="color: var(--text-secondary);">
@@ -126,7 +443,7 @@
          ====================================================================== -->
     <section class="section-padding surface-charcoal">
       <div class="container-luxury">
-        <div class="row g-5">
+        <div class="row g-5 align-items-start">
           <!-- Left: Editable Contact Placeholders -->
           <div class="col-lg-5 reveal-up">
             <span class="eyebrow-label">GUEST RELATIONS</span>
@@ -234,8 +551,8 @@
 
           <!-- Right: Contact Form -->
           <div class="col-lg-7 reveal-up">
-            <div class="p-4 p-md-5 border h-100"
-              style="border-color: var(--subtle-border) !important; background: var(--card-bg);">
+            <div class="p-4 p-md-5 border contact-form-card"
+              style="border-color: var(--subtle-border) !important; background: var(--card-bg); height: auto !important;">
               <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
                 <div>
                   <span class="eyebrow-label mb-1">SEND A MESSAGE</span>
@@ -338,13 +655,14 @@
         <div class="col-lg-4">
           <a href="index.html" class="brand-logo mb-3">
             <svg class="brand-logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="60" height="60" rx="2" stroke="#D6B878" stroke-width="1.5" />
-              <path d="M10 50H54" stroke="#D6B878" stroke-width="1.5" />
-              <path d="M16 50V30L24 24V50" stroke="#D6B878" stroke-width="1.5" />
-              <path d="M28 50V14L36 10V50" stroke="#D6B878" stroke-width="1.5" />
-              <path d="M40 50V22L48 26V50" stroke="#D6B878" stroke-width="1.5" />
-              <circle cx="46" cy="14" r="3" fill="#D6B878" />
-            </svg>
+            <rect x="3" y="3" width="58" height="58" rx="12" fill="#15171C" stroke="#D6B878" stroke-width="2"/>
+            <path d="M13 50V28C13 17.5066 21.5066 9 32 9C42.4934 9 51 17.5066 51 28V50" stroke="#D6B878" stroke-width="1.5" stroke-opacity="0.55"/>
+            <path d="M20 24H44L32 37L20 24Z" fill="#D6B878" fill-opacity="0.2" stroke="#D6B878" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M32 37V49" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M24 49H40" stroke="#D6B878" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="32" cy="17" r="2.5" fill="#D6B878"/>
+            <path d="M16 54H48" stroke="#D6B878" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+          </svg>
             <div class="brand-logo-text">
               <span class="brand-wordmark">ROOFTOP</span>
               <span class="brand-subtitle">RESTAURANT &amp; LOUNGE BAR</span>
@@ -370,16 +688,16 @@
           <h3 class="footer-heading">Navigation</h3>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="home-2.html">Home 2</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-2">
           <h3 class="footer-heading">Experience</h3>
           <ul class="footer-links">
             <li><a href="menu.html">Rooftop Dining</a></li>
@@ -390,19 +708,19 @@
           </ul>
         </div>
 
-        <div class="col-md-4 col-lg-3">
+        <div class="col-md-4 col-lg-4">
           <h3 class="footer-heading">Contact (Demo Placeholders)</h3>
           <ul class="footer-links">
             <li>
-              <i class="bi bi-geo-alt me-2" style="color:var(--champagne-gold);"></i>
+              <i class="bi bi-geo-alt" style="color:var(--champagne-gold);"></i>
               <span>[Editable Address Placeholder: Sky-Deck Level, Metropolitan Tower]</span>
             </li>
             <li>
-              <i class="bi bi-telephone me-2" style="color:var(--champagne-gold);"></i>
+              <i class="bi bi-telephone" style="color:var(--champagne-gold);"></i>
               <span>[Editable Phone Placeholder: +91 00000 00000]</span>
             </li>
             <li>
-              <i class="bi bi-envelope me-2" style="color:var(--champagne-gold);"></i>
+              <i class="bi bi-envelope" style="color:var(--champagne-gold);"></i>
               <span>[Editable Email Placeholder: reservations@rooftop-demo.com]</span>
             </li>
           </ul>
@@ -418,7 +736,9 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=6"></script>
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top" title="Back to Top"><i class="bi bi-arrow-up"></i></button>
 </body>
 
 </html>

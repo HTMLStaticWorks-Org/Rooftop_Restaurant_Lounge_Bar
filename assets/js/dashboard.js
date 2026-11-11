@@ -91,7 +91,7 @@
       category: 'Live Jazz',
       date: 'Friday, 13 Nov 2026 (Demo)',
       time: '8:30 PM – 11:45 PM',
-      image: 'assets/images/RZ25x8DjtcADh5QeWhENluw_3zAQIJsvYILDdgLY4gjlPlcpRKzR-3qlLYIrw_CWIY6112WpiWZ5favVmMtxrxRNDkXIIvAlyzOQzKfME3UT9uWGK8klU5ARIhL5zAVGY34cHg0UyWYvUqCOKKDFb7xJeGziblY8MyaEIZ-Z2_bdwbm5.jpg',
+      image: 'assets/images/RZ25x8DjtcAD.jpg',
       desc: 'Contemporary saxophone and upright bass quartet performing against panoramic city lights with curated vintage cocktails.'
     },
     {
@@ -100,7 +100,7 @@
       category: 'Acoustic Evening',
       date: 'Sunday, 15 Nov 2026 (Demo)',
       time: '6:00 PM – 9:30 PM',
-      image: 'assets/images/AUyNX-TjOq1BqzDUzvah1E7KIeIhG6IjVkAUdhYrZEr01qk2gxDLTxHIPj4Ua7T-U9cXLfGBArXraKLPz7oAKkQwOZSutDGQjb1P8d-U4qmP2gDIPHJt0fRNCSj9vZS3vwkQBYwLThayfHtk30zPPCZl2NKXSGMuTdXdSsvWny8.jpg',
+      image: 'assets/images/AUyNX-TjOq1B.jpg',
       desc: 'Unplugged soulful melodies during golden hour paired with our Golden Hour Martini and artisanal mezze platters.'
     },
     {
@@ -109,7 +109,7 @@
       category: 'DJ & Lounge',
       date: 'Saturday, 21 Nov 2026 (Demo)',
       time: '9:30 PM – 1:30 AM',
-      image: 'assets/images/Ss9y01lCzCKlU2tG9QD8VU_5Nbd1OxO7rnibxMKAlrEor2Xle9_8ckORHi_V89_v89watF-MB9LI-yoC6hLrpuusu8jcaQfatitkA9mZeGG1TBloT8HvPKCrUGyAyIrYOPb9OeexGq-NCEzTaDOQrjuEhNJD5_70bEaTjcvP8kc.jpg',
+      image: 'assets/images/Ss9y01lCzCKl.jpg',
       desc: 'Deep melodic house and ambient lounge grooves under the open sky with bottle service and terrace seating.'
     },
     {
@@ -118,7 +118,7 @@
       category: 'Exclusive Soirée',
       date: 'Saturday, 28 Nov 2026 (Demo)',
       time: '8:00 PM Onwards',
-      image: 'assets/images/drNFxgCDI8BfXhM_YaRIJbuZDghXmxLAVrBPlcLUXvKmLEz_NIKwx92BDuFWVrZJpiNPeYammyOv4wCvu9q78PMFrR4VP-8stzR2_gpN_dO1rPoej7tTzuq7Kymc4Jkw7H6GQIdulJNvw0mSBXrnZIr2yhLmU3QiMtK9-43Due40_Zeq.jpg',
+      image: 'assets/images/drNFxgCDI8Bf.jpg',
       desc: 'A bespoke five-course chef tasting menu and champagne pairing celebrating elevated metropolitan nightlife.'
     }
   ];
@@ -945,4 +945,13 @@
       });
     });
   });
+
+  // Topbar sticky scroll enhancement
+  window.addEventListener('scroll', () => {
+    const topbar = document.querySelector('.dashboard-topbar');
+    if (topbar) {
+      topbar.classList.toggle('scrolled', window.scrollY > 15);
+    }
+  }, { passive: true });
+
 })();
