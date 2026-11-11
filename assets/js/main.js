@@ -459,6 +459,13 @@
      4B. GLOBAL FLOATING BACK-TO-TOP BUTTON (ALL PAGES)
      -------------------------------------------------------------------------- */
   function initScrollTopButton() {
+    // Exclude login and signup auth pages
+    if (document.querySelector('.auth-page-layout') || document.getElementById('guestLoginForm') || document.getElementById('guestSignupForm')) {
+      const existingBtn = document.getElementById('scrollTopBtn');
+      if (existingBtn) existingBtn.remove();
+      return;
+    }
+
     let btn = document.getElementById('scrollTopBtn');
     if (!btn) {
       btn = document.createElement('button');
